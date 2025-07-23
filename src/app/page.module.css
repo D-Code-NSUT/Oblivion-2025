@@ -1,0 +1,96 @@
+/* Clean styles for the main page */
+
+.container {
+  position: relative;
+}
+
+.heroSection {
+  height: 100vh;
+  padding: 2rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.heroSection h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.heroSection p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 10;
+  background: black;
+  position: relative;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.section p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  line-height: 1.6;
+  color: #d4d4d4;
+}
+
+.featBlock1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.section4 {
+  position: relative;
+  overflow: hidden;
+}
+
+.section4::before {
+  z-index: 120;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg,rgb(0, 0, 0) 0%, rgb(82, 82, 82) 50%, rgb(0, 0, 0) 100%);
+}
+
+.section4::after {
+  z-index: 110;
+  content: '';
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1200px;
+  height: 200px;
+  border-radius: 10vmax;
+  filter: blur(60px);
+  background-color: #000000;
+}
+
+@media screen and (max-width: 950px) {
+    .featBlock1 {
+        flex-direction: column;
+    }
+}
