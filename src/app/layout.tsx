@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import LenisProvider from "@/components/lenis-provider";
-import NavContainer from "@/components/nav/nav-container";
+import Nav from '@/components/nav/nav';
 
 import { Pirata_One, Roboto_Mono, Bebas_Neue, Source_Sans_3} from "next/font/google";
 
@@ -43,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${pirata.variable} ${robotoMono.variable} ${bebasNeue.variable} ${sourceSans.variable}`}>
-        <NavContainer />
+        <Nav />
         <LenisProvider>
           {children}
         </LenisProvider>

@@ -90,7 +90,7 @@ export default function Community() {
                 <div>
                     <FaLinkedin 
                         style={{
-                            fontSize: '72px',
+                            fontSize: '46px',
                             marginBottom: '10px',
                         }} 
                     />    

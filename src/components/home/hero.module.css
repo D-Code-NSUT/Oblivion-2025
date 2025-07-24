@@ -1,7 +1,7 @@
 @keyframes pirateAppear {
     0% {
-        opacity: 0.8;
-        transform: translate(-50%, calc(-50% + 300px));
+        opacity: 0;
+        transform: translate(-50%, calc(-50% + 200px));
     }
     100% {
         opacity: 1;
@@ -9,32 +9,87 @@
     }
 }
 
-.heroText {
-    font-size: 16rem;
-    line-height: 1;
-    text-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+@keyframes reveal {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-.heroText02 {
-    color: '#75FFF6';
-    font-size: 6rem;
-    line-height: 1;
-    text-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+@keyframes pirateAppearMobile {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, calc(-50% + 200px));
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, calc(-50% + 100px));
+    }
 }
 
 .pirateImage {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, calc(-50% + 300px));
     width: 850px;
-    height: auto;
-    max-width: 90vw;
-    max-height: 100vh;
+    height: 1250px;
     object-fit: contain;
-    animation: pirateAppear 1.4s linear forwards;
+    transform: translate(-50%, calc(-50% + 200px));
+    animation: pirateAppear 1.8s ease-in-out forwards;
+    animation-delay: 0.8s;
     opacity: 0;
     z-index: 2;
+}
+
+.heroText{
+    width: 1400px;
+    height: 300px;
+    opacity: 0;
+    animation: reveal 2.4s ease-in-out forwards;
+}
+
+.themeText{
+    margin-top: 14px;
+    width: 1800px;
+    height: 170px;
+    opacity: 0;
+    animation: reveal 1.2s ease-in-out forwards;
+    animation-delay: 2s;
+}
+
+@media screen and (max-width: 1640px) {
+    .heroText {
+        width: 1200px;
+        height: 250px;
+    }
+    .themeText {
+        width: 1400px;
+        height: 120px;
+    }
+    .pirateImage{
+        height: 1000px;
+        width: 700px;
+    }
+    
+}
+
+@media screen and (max-width: 1300px) {
+    .heroText {
+        width: 1000px;
+        height: 200px;
+    }
+    .themeText {
+        margin-top: 0px;
+        width: 1000px;
+        height: 100px;
+    }
+    .pirateImage {
+        height: 900px;
+        width: 600px;
+    }
+    
 }
 
 .heroSection {
@@ -68,7 +123,7 @@
 }
 
 .heroBg {
-    z-index: -1;
+    z-index: 9;
     height: calc(100vh + 20px);
     background-color: #000000;
     color: white;
@@ -95,7 +150,7 @@
     height: 100vh;
     font-size: 150vw;
     width: 100%;
-    
+    position: fixed;
     left: 0;
     background: 
         radial-gradient(ellipse at bottom right, #000000, transparent),
@@ -112,7 +167,7 @@
         max-width: 1300px;
         color: rgb(255, 255, 255);
         text-align: left;
-        font-size: 14vw;
+        font-size: 13vw;
         font-weight: 100;
         border-radius: 12px;
         backdrop-filter: blur(50px);
@@ -120,6 +175,15 @@
         border: 1px solid rgba(255, 255, 255, 0.144);
         font-family:"Impact", sans-serif;    
         text-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .titleText {
+        font-weight: bold;
+        font-size: 3.9rem;
+        line-height: 1.2;
     }
 }
 
@@ -140,7 +204,7 @@
         font-size: 30vw;
         h2 {
             font-size: 25vw;
-            padding: 25px;
+            padding: 24px;
         }
     }
     
@@ -164,27 +228,19 @@
     }
 
     .heroText {
-        font-size: 4rem;
-        text-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+        width: 350px;
+        height: 85px;
     }
 
-    .heroText02 {
-        font-size: 3rem;
-        text-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+    .themeText {
+        width: 410px;
+        height: 40px;
+        margin-top: -100px;
     }
 
-    .pirateImage {
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        transform: translate(-50%, calc(-50% + 200px));
-        width: 90vw;
-        max-width: 400px;
-        height: auto;
-        max-height: 100vh;
-        object-fit: contain;
-        z-index: 2;
-        opacity: 0;
-        animation: pirateAppear 1.2s ease-out forwards;
+    .pirateImage{
+        width: 400px;
+        height: 600px;
+        animation: pirateAppearMobile 1.8s ease-in-out forwards;
     }
 }

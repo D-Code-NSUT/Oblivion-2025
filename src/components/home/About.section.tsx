@@ -32,7 +32,7 @@ function About() {
         />
         <Image
             className="block relative mx-auto mb-10 w-[60%] max-w-[300px] h-auto"
-            src="/group 23.svg"
+            src="/group-23.svg"
             alt="pspss"
             width={300}
             height={61}
@@ -55,6 +55,5 @@ function About() {
     </div>
   )
 }
-//ml-3 sm:ml-3 md:ml-5 lg:ml-8 
-        //mr-3 sm:mr-3 md:mr-5 lg:mr-25'
+
 export default About;
