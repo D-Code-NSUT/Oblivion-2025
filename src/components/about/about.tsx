@@ -2,7 +2,7 @@
 import { motion } from "motion/react";
 import React from 'react'
 import Image from 'next/image';
-import styles from  '@/components/home/about.module.css'
+import styles from  '@/components/about/about.module.css'
 function About() {
     const [hovered,setHovered] = React.useState(false);
  const content = <>

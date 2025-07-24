@@ -37,6 +37,12 @@
   position: relative;
 }
 
+.timelineSection {
+  z-index: 10;
+  background: black;
+  position: relative;
+}
+
 .section h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
