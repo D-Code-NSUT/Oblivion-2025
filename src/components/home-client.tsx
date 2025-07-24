@@ -23,6 +23,9 @@ export default function HomeClient() {
         </div>
       </section>
 
+<TimeLine />
+<JoinCommunity />
+
       {/* <section id="features" className={`${styles.section} ${styles.section3}`}>
         <div style={{
           width: 'calc(100% - 50px)',
