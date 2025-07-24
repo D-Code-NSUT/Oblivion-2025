@@ -26,6 +26,7 @@ function About() {
             height={0}
             priority
         />
+        <div className={`absolute inset-0 ${styles.lrGradient}`}/>
         <Image
         className= {`absolute -top-40 left-10vw ${styles.smoothFade} ${hovered?styles.flickerFreq:styles.flicker} opacity-70`}
             src="/lightning.png"
@@ -34,7 +35,7 @@ function About() {
             height={0}
             priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/100 via-black/30 to-black/100" />
+        <div className={`absolute inset-0 ${styles.tbGradient}`}/>
         <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
