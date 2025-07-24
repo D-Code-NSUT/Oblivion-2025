@@ -8,6 +8,7 @@ import { useHashScroll } from '@/hooks/use-hash-scroll';
 import About from '@/components/about/about';
 import TimeLine from '@/components/timeline/timeline';
 import JoinCommunity from '@/components/join-community/join-community';
+import WhyToStep from '@/components/WhyToStep/WhyToStep';
 
 export default function HomeClient() {
   // Handle hash scrolling on page load
