@@ -3,7 +3,7 @@ import React from "react";
 
 const TimeLine = () => {
   return (
-    <div className="timeline-wrapper">
+    <>
       <div className="relative w-full bg-black xs:h-[1024px] h-[800px]">
         <img
           src="/timeline-pirate.png"
@@ -65,7 +65,7 @@ const TimeLine = () => {
           </h2>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

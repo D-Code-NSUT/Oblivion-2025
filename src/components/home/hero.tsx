@@ -92,17 +92,6 @@ export default function Hero() {
                                     priority
                                 />
                                 <div
-                                    style={{
-                                        position: 'absolute',
-                                        top: 0,
-                                        left: 0,
-                                        width: '100%',
-                                        height: '100%',
-                                        backgroundColor: 'rgba(0, 0, 0, 0.4)',
-                                        zIndex: -2,
-                                    }}
-                                />
-                                <div
                                 className={styles.heroText}
                                 style={{
                                     position: 'absolute',
@@ -157,7 +146,7 @@ export default function Hero() {
                     </div>
                 </section>
 
-                <section style={{
+                {/* <section style={{
                     position: y < 66.66 ? y >= 1 ? 'fixed' : 'absolute' : 'absolute',
                     top: y < 66.66 ? '0' : '100vh',
                 }} className={styles.titleSection}>
@@ -202,7 +191,7 @@ export default function Hero() {
                         amplitude={1.0}
                         speed={1}
                     />
-                </section>
+                </section> */}
             </div>
         </motion.div>
     );
