@@ -8,6 +8,7 @@ import { useHashScroll } from '@/hooks/use-hash-scroll';
 import About from '@/components/home/about';
 import TimeLine from '@/components/timeline/timeline';
 import JoinCommunity from '@/components/join-community/join-community';
+import WhyToStep from '@/components/WhyToStep/WhyToStep';
 
 export default function HomeClient() {
   // Handle hash scrolling on page load
@@ -16,15 +17,15 @@ export default function HomeClient() {
   return (
     <div className={styles.container}>
       <Hero />
-      
+
       <section id="features" className={`${styles.section} ${styles.section3}`}>
-      
-          <About />
-        
+
+        <About />
+
       </section>
 
-<TimeLine />
-<JoinCommunity />
+      <TimeLine />
+      <JoinCommunity />
 
       {/* <section id="features" className={`${styles.section} ${styles.section3}`}>
         <div style={{
@@ -50,7 +51,7 @@ export default function HomeClient() {
           <JoinCommunity />
         </div>
       </section> */}
-      
+
       <section id="section-4" style={{
         zIndex: 10,
         display: 'flex',
@@ -82,6 +83,7 @@ export default function HomeClient() {
           <Community />
         </div>
       </section>
+      <WhyToStep />
     </div>
   );
 }
