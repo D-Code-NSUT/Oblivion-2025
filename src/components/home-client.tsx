@@ -5,10 +5,12 @@ import styles from '@/app/page.module.css';
 import Community from '@/components/community/community';
 import Beams from '@/modules/Beams/Beams';
 import { useHashScroll } from '@/hooks/use-hash-scroll';
-import About from '@/components/home/about';
+import About from '@/components/about/about';
 import TimeLine from '@/components/timeline/timeline';
 import JoinCommunity from '@/components/join-community/join-community';
 import WhyToStep from '@/components/WhyToStep/WhyToStep';
+
+// you need to wrap the component with section tags
 
 export default function HomeClient() {
   // Handle hash scrolling on page load
@@ -18,41 +20,26 @@ export default function HomeClient() {
     <div className={styles.container}>
       <Hero />
 
-      <section id="features" className={`${styles.section} ${styles.section3}`}>
-
+      <section id="about" className={styles.section}>
         <About />
-
       </section>
 
-      <TimeLine />
-      <JoinCommunity />
-
-      {/* <section id="features" className={`${styles.section} ${styles.section3}`}>
-        <div style={{
-          width: 'calc(100% - 50px)',
-          maxWidth: '1300px',
-          marginBottom: '80px',
-          background: "black",
-          borderRadius: '8px',
-          zIndex: 100,
-          position: 'relative',
-          height: '100vh',
-          fontSize: '1.5rem',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}>
+      <section id="timeline" className={styles.timelineSection}>
           <TimeLine />
-        </div>
+      </section>
+{/* 
+      <section id="why-to-step" className={styles.section}>
+        <WhyToStep />
       </section> */}
 
-      {/* <section id="features" className={`${styles.section} ${styles.section3}`}>
+      <section id="join-community" className={styles.section}>
         <div>
           <JoinCommunity />
         </div>
-      </section> */}
+      </section>
 
-      <section id="section-4" style={{
+{/* 
+      <section id="contact-us" style={{
         zIndex: 10,
         display: 'flex',
         justifyContent: 'center',
@@ -82,11 +69,8 @@ export default function HomeClient() {
         }}>
           <Community />
         </div>
-      </section>
+      </section> */}
 
-      <section>
-        <WhyToStep />
-      </section>
     </div>
   );
 }

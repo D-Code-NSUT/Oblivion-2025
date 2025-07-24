@@ -122,7 +122,7 @@ export default function Nav() {
     const pathname = usePathname();
     
     // Define the sections to spy on - try both hero section IDs
-    const sectionIds = ['hero-section', 'hero', 'features'];
+    const sectionIds = [ 'about','events', 'sponsors'];
     const activeSection = useScrollSpy(sectionIds);
     
     // Helper function to determine if a nav link should be active
@@ -297,12 +297,12 @@ export default function Nav() {
                         </motion.div>
                         <motion.div variants={mobileNavLinkVariants}>
                             <div onClick={() => setMenuOpen(false)}>
-                                <NavLink href="/#events" isActive={isNavLinkActive('/#events')}>Events</NavLink>
+                                <NavLink href="/#timeline" isActive={isNavLinkActive('/#timeline')}>Events</NavLink>
                             </div>
                         </motion.div>
                         <motion.div variants={mobileNavLinkVariants}>
                             <div onClick={() => setMenuOpen(false)}>
-                                <NavLink href="/#sponsors" isActive={isNavLinkActive('/#sponsors')}>Sponsors</NavLink>
+                                <NavLink href="/#join-community" isActive={isNavLinkActive('/#join-community')}>Sponsors</NavLink>
                             </div>
                         </motion.div>
                         <motion.div 

@@ -3,33 +3,33 @@ import React from "react";
 
 const TimeLine = () => {
   return (
-    <>
+    <div className="timeline-wrapper">
       <div className="relative w-full bg-black xs:h-[1024px] h-[800px]">
-        <img
+        <Image
           src="/timeline-pirate.png"
           alt="Timeline Pirate"
-          // width={500}
-          // height={500}
+          width={500}
+          height={500}
           className="absolute top-0 right-0  sm:w-max  w-full h-full  z-0"
         />
         <div
           style={{
             background:
-              "linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%)",
+              "linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.3) 100%)",
           }}
           className="absolute top-0 right-0 sm:w-[440px] h-[180px] w-full z-10"
         ></div>
         <div
           style={{
             background:
-              "linear-gradient(93.5deg, #000000 6.57%, rgba(0, 0, 0, 0) 96.44%)",
+              "linear-gradient(93.5deg, #000000 6.57%, rgba(0, 0, 0, 0.3) 96.44%)",
           }}
           className="absolute top-0 right-0 sm:w-[606px] xs:h-[1024px] h-[800px] w-full z-10"
         ></div>
         <div
           style={{
             background:
-              "linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 100%)",
+              "linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0.3) 100%)",
           }}
           className="absolute -bottom-20 right-0 sm:w-[516px] h-[351px] w-full z-10"
         ></div>
@@ -38,9 +38,11 @@ const TimeLine = () => {
           <h1 className="uppercase font-pirata lg:text-[120px] xs:text-[100px] text-[80px] text-[#36B9C5] text-center pt-20">
             TIMELINE
           </h1>
-          <img
+          <Image
             src="/timeline.png"
             alt="Timeline Ship"
+            width={1200}
+            height={600}
             className="absolute top-1/2  transform  -translate-y-1/2 w-full h-auto"
           />
           <h2 className="absolute md:top-[55%] top-[55%] md:left-[17%] left-[14%] text-[#5CE4FF] font-roboto font-bold lg:text-[32px] md:text-[26px] sm:text-[20px] xs:text-[16px] text-[14px]">
@@ -65,7 +67,7 @@ const TimeLine = () => {
           </h2>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
