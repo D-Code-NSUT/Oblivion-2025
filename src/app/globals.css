@@ -10,6 +10,10 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-pirata: var(--font-pirata);
+  --font-roboto: var(--font-roboto-mono);
+  --font-bebas: var(--font-bebas-neue);
+  --font-source: var(--font-source);
 }
 
 @media (prefers-color-scheme: dark) {
