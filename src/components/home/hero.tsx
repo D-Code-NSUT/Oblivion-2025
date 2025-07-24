@@ -146,7 +146,7 @@ export default function Hero() {
                     </div>
                 </section>
 
-                <section style={{
+                {/* <section style={{
                     position: y < 66.66 ? y >= 1 ? 'fixed' : 'absolute' : 'absolute',
                     top: y < 66.66 ? '0' : '100vh',
                 }} className={styles.titleSection}>
@@ -191,7 +191,7 @@ export default function Hero() {
                         amplitude={1.0}
                         speed={1}
                     />
-                </section>
+                </section> */}
             </div>
         </motion.div>
     );
