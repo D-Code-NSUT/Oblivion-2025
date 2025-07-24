@@ -2,7 +2,7 @@
 import { motion } from "motion/react";
 import React from 'react'
 import Image from 'next/image';
-import styles from  '@/components/home/about.module.css'
+import styles from  '@/components/home/aboutSection/about.module.css';
 function About() {
     const [hovered,setHovered] = React.useState(false);
  const content = <>
@@ -36,10 +36,10 @@ function About() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/100 via-black/30 to-black/100" />
         <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 2 }}
-            viewport={{ once: true }}
+            viewport={{ amount: 0.3, once: false }}
         >
         <Image
             className="block relative mx-auto mb-10 w-[60%] max-w-[400] h-auto"
