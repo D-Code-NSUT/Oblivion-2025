@@ -5,7 +5,7 @@ import styles from '@/app/page.module.css';
 import Community from '@/components/community/community';
 import Beams from '@/modules/Beams/Beams';
 import { useHashScroll } from '@/hooks/use-hash-scroll';
-import About from '@/components/home/About.section';
+import About from '@/components/home/about';
 import TimeLine from '@/components/timeline/timeline';
 import JoinCommunity from '@/components/join-community/join-community';
 
@@ -18,9 +18,9 @@ export default function HomeClient() {
       <Hero />
       
       <section id="features" className={`${styles.section} ${styles.section3}`}>
-        <div>
+      
           <About />
-        </div>
+        
       </section>
 
 <TimeLine />
