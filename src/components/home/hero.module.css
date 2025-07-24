@@ -68,7 +68,7 @@
 }
 
 .heroBg {
-    z-index: 9;
+    z-index: -1;
     height: calc(100vh + 20px);
     background-color: #000000;
     color: white;
@@ -95,7 +95,7 @@
     height: 100vh;
     font-size: 150vw;
     width: 100%;
-    position: fixed;
+    
     left: 0;
     background: 
         radial-gradient(ellipse at bottom right, #000000, transparent),
