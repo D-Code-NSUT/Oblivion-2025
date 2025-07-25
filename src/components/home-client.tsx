@@ -32,44 +32,17 @@ export default function HomeClient() {
         <WhyToStep />
       </section> */}
 
-      <section id="join-community" className={styles.section}>
+      <section id="join-community" className={`${styles.section} relative z-10`}>
         <div>
           <JoinCommunity />
         </div>
       </section>
 
-{/* 
-      <section id="contact-us" style={{
-        zIndex: 10,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: 'black',
-        position: 'relative',
-        height: '100vh',
-      }} className={`${styles.section} ${styles.section4}`}>
-        <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
-          <Beams
-            beamWidth={2}
-            beamHeight={15}
-            beamNumber={20}
-            lightColor="#ffffff"
-            speed={2}
-            noiseIntensity={1.75}
-            scale={0.2}
-            rotation={0}
-          />
+      <section id="WhyToStep" className={`${styles.section} relative z-10`}>
+        <div>
+          <WhyToStep />
         </div>
-        <div style={{
-          zIndex: 110,
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-        }}>
-          <Community />
-        </div>
-      </section> */}
+      </section>
 
     </div>
   );
