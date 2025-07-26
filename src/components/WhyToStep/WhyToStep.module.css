@@ -87,7 +87,7 @@
 }
 
 .hideContainer > * {
-  opacity: 0;
+  opacity: 1;
   animation: hideContent  ease-out 1.2s  forwards; /* Starts after 1s delay */
   
 }
