@@ -8,7 +8,9 @@ import { useHashScroll } from '@/hooks/use-hash-scroll';
 import About from '@/components/about/about';
 import TimeLine from '@/components/timeline/timeline';
 import JoinCommunity from '@/components/join-community/join-community';
-import WhyToStep from '@/components/WhyToStep/WhyToStep';
+import WhyToStep from '@/components/WhyToStep/WhyToStep'; 
+import EventCard from '@/components/EventCard/EventCard'; 
+import Events from '@/components/Events/Events'; 
 
 // you need to wrap the component with section tags
 
@@ -41,6 +43,12 @@ export default function HomeClient() {
       <section id="WhyToStep" className={`${styles.section} relative z-10`}>
         <div>
           <WhyToStep />
+        </div>
+      </section>
+
+      <section id="EventCard" className={`${styles.section} `}>
+        <div>
+          <Events />
         </div>
       </section>
 
