@@ -6,7 +6,7 @@ import { BsWhatsapp } from "react-icons/bs";
 const JoinCommunity = () => {
   return (
     <>
-      <div className="relative w-full bg-black h-[1024px]">
+      <div className="relative w-full bg-black min-h-screen pb-40 lg:pb-48">
         <h1 className="uppercase font-pirata lg:text-[120px] xs:text-[100px] text-[80px] text-[#36B9C5] text-center pt-14">
           JOIN THE COMMUNITY
         </h1>
@@ -51,7 +51,7 @@ const JoinCommunity = () => {
           <img
             src="/treasure-chest.png"
             alt="Treasure Chest"
-            className="lg:w-[381px] lg:h-[381px] md:block hidden w-[320px] h-[320px] absolute -bottom-60 lg:-bottom-1/2 -right-24 lg:-right-40 z-10"
+            className="lg:w-[381px] lg:h-[381px] md:block hidden w-[320px] h-[320px] absolute -bottom-32 lg:-bottom-40 -right-16 lg:-right-24 z-10"
           />
         </div>
       </div>

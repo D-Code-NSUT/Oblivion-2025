@@ -17,7 +17,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
 
@@ -25,3 +25,47 @@
   position: relative;
   z-index: 2;
 }
+
+.revealContainer {
+  position: relative;
+  overflow: hidden;
+}
+
+.revealContainer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Same as your darkBackground overlay */
+  transform: translateX(0);
+  z-index: 3;
+  animation: revealContent 1s ease-out forwards;
+}
+
+.revealContainer > * {
+  opacity: 0;
+  animation: showContent  ease-out 1.5s  forwards; /* Starts after 1s delay */
+  
+}
+
+@keyframes revealContent {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes showContent {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+

@@ -8,7 +8,10 @@ import { useHashScroll } from '@/hooks/use-hash-scroll';
 import About from '@/components/about/about';
 import TimeLine from '@/components/timeline/timeline';
 import JoinCommunity from '@/components/join-community/join-community';
-import WhyToStep from '@/components/WhyToStep/WhyToStep';
+import WhyToStep from '@/components/WhyToStep/WhyToStep'; 
+import EventCard from '@/components/EventCard/EventCard'; 
+import Events from '@/components/Events/Events'; 
+import EventDetailsPopup from '@/components/EventDetailsPopup/EventDetailsPopup'; 
 
 // you need to wrap the component with section tags
 
@@ -32,44 +35,24 @@ export default function HomeClient() {
         <WhyToStep />
       </section> */}
 
-      <section id="join-community" className={styles.section}>
+      <section id="join-community" className={`${styles.section} relative z-10`}>
         <div>
           <JoinCommunity />
         </div>
       </section>
 
-{/* 
-      <section id="contact-us" style={{
-        zIndex: 10,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: 'black',
-        position: 'relative',
-        height: '100vh',
-      }} className={`${styles.section} ${styles.section4}`}>
-        <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
-          <Beams
-            beamWidth={2}
-            beamHeight={15}
-            beamNumber={20}
-            lightColor="#ffffff"
-            speed={2}
-            noiseIntensity={1.75}
-            scale={0.2}
-            rotation={0}
-          />
+      <section id="events" className={`${styles.section} `}>
+        <div>
+          <Events />
         </div>
-        <div style={{
-          zIndex: 110,
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-        }}>
-          <Community />
+      </section>
+
+      <section id="WhyToStep" className={`${styles.section} relative z-10`}>
+        <div>
+          <WhyToStep />
         </div>
-      </section> */}
+      </section>
+
 
     </div>
   );
