@@ -3,7 +3,6 @@ import styles from './hero.module.css';
 import { useEffect, useRef, useState } from 'react';
 import { motion, useScroll } from "motion/react"
 import Image from 'next/image';
-import Aurora from '@/modules/Aurora/Aurora';
 export default function Hero() {
     const [y, setY] = useState(0);
     const [initialY, setInitialY] = useState<number | null>(null);
@@ -61,23 +60,17 @@ export default function Hero() {
         <motion.div>
             <div ref={heroRef} id="hero-section" className={styles.heroSection}>
                 <section
-                style={{
-                    borderBottomLeftRadius: y > 33.34 ? 75 : 0,
-                    borderBottomRightRadius: y > 33.34 ? 75 : 0,
-                }} 
+
                 className={styles.heroBg}>
                 </section>
                 <section
-                style={{
-                    borderBottomLeftRadius: y > 33.34 ? 40 : 0,
-                    borderBottomRightRadius: y > 33.34 ? 40  : 0,
-                }} 
+  
                 id='hero' className={styles.hero}>
                     <div className={styles.imageContainer}>
                             <>
                                 {/* Background image */}
                                 <Image 
-                                    src="/hero-bg.png"
+                                    src="/desktop-6.png"
                                     alt="Hero Background"
                                     fill
                                     style={{
@@ -91,7 +84,7 @@ export default function Hero() {
                                     quality={100}
                                     priority
                                 />
-                                <div
+                                {/* <div
                                     style={{
                                         position: 'absolute',
                                         top: 0,
@@ -101,7 +94,7 @@ export default function Hero() {
                                         backgroundColor: 'rgba(0, 0, 0, 0.5)',
                                         zIndex: -2,
                                     }}
-                                />
+                                /> */}
                                 <div
                                 className={styles.heroText}
                                 style={{
@@ -156,53 +149,6 @@ export default function Hero() {
                                 
                             </>
                     </div>
-                </section>
-
-                <section style={{
-                    position: y < 66.66 ? y >= 1 ? 'fixed' : 'absolute' : 'absolute',
-                    top: y < 66.66 ? '0' : '100vh',
-                }} className={styles.titleSection}>
-                    <h2 style={{
-                    position: y > 66.66 ? y == 1 ? 'absolute' :'fixed' : 'absolute',
-
-                    }}>
-                        <motion.span
-                            style={{ display: 'block', overflow: 'hidden' }}
-                        >
-                            <motion.span
-                                style={{ display: 'block' }}
-                                initial={{ y: '100%' }}
-                                animate={{ y: y > 55 ? '0%' : '100%' }}
-                                transition={{ 
-                                    duration: 0.8, 
-                                    ease: [0.6, -0.05, 0.01, 0.99]
-                                }}
-                            >
-                                <span className={styles.titleText}>WHAT IS</span>
-                            </motion.span>
-                        </motion.span>
-                        <motion.span
-                            style={{ display: 'block', overflow: 'hidden' }}
-                        >
-                            <motion.span
-                                style={{ display: 'block' }}
-                                initial={{ y: '100%' }}
-                                animate={{ y: y > 50 ? '0%' : '100%' }}
-                                transition={{ 
-                                    duration: 0.8, 
-                                    ease: [0.6, -0.05, 0.01, 0.99]
-                                }}
-                            >
-                                <span className={styles.titleText}>OBLIVION?</span>
-                            </motion.span>
-                        </motion.span>
-                    </h2>
-                    <Aurora 
-                        colorStops={["#75FFF6", "#234A4E", "#FFA02B"]}
-                        blend={0.5}
-                        amplitude={1.0}
-                        speed={1}
-                    />
                 </section>
             </div>
         </motion.div>

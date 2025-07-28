@@ -2,8 +2,6 @@
 
 import Hero from '@/components/home/hero';
 import styles from '@/app/page.module.css';
-import Community from '@/components/community/community';
-import Beams from '@/modules/Beams/Beams';
 import { useHashScroll } from '@/hooks/use-hash-scroll';
 import About from '@/components/about/about';
 import TimeLine from '@/components/timeline/timeline';
@@ -11,7 +9,8 @@ import JoinCommunity from '@/components/join-community/join-community';
 import WhyToStep from '@/components/WhyToStep/WhyToStep'; 
 import EventCard from '@/components/EventCard/EventCard'; 
 import Events from '@/components/Events/Events'; 
-import EventDetailsPopup from '@/components/EventDetailsPopup/EventDetailsPopup'; 
+import EventDetailsPopup from '@/components/EventDetailsPopup/EventDetailsPopup';
+import Image from 'next/image';
 
 // you need to wrap the component with section tags
 
@@ -21,26 +20,29 @@ export default function HomeClient() {
 
   return (
     <div className={styles.container}>
+      <div>
       <Hero />
-
+      
+      {/* Down Arrow between Home and About */}
+      <div className={styles['arrow-down']}>
+        <Image
+          src="/group-26.png"
+          alt="Down Arrow"
+          fill
+          style={{
+            opacity: 0.8,
+          }}
+        />
+      </div>
+      
       <section id="about" className={styles.section}>
         <About />
       </section>
+    </div>
 
       <section id="timeline" className={styles.timelineSection}>
           <TimeLine />
       </section>
-{/* 
-      <section id="why-to-step" className={styles.section}>
-        <WhyToStep />
-      </section> */}
-
-      <section id="join-community" className={`${styles.section} relative z-10`}>
-        <div>
-          <JoinCommunity />
-        </div>
-      </section>
-
       <section id="events" className={`${styles.section} `}>
         <div>
           <Events />
@@ -53,7 +55,11 @@ export default function HomeClient() {
         </div>
       </section>
 
-
+      <section id="join-community" className={`${styles.section} relative z-10`}>
+        <div>
+          <JoinCommunity />
+        </div>
+      </section>
     </div>
   );
 }

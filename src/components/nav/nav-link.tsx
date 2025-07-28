@@ -21,7 +21,25 @@ export function NavLink({ href, children, isActive: externalIsActive }: NavLinkP
     const isActive = externalIsActive !== undefined ? externalIsActive : pathIsActive;
 
     const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-        if (isHashLink) {
+        if (href === '/') {
+            // Special handling for home link
+            e.preventDefault();
+            if (pathname === '/') {
+                // If already on home page, scroll to top
+                if (lenis) {
+                    lenis.scrollTo(0, {
+                        duration: 1.5,
+                        easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                    });
+                } else {
+                    // Fallback to native scroll
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            } else {
+                // Navigate to home page
+                router.push('/');
+            }
+        } else if (isHashLink) {
             e.preventDefault();
             const targetId = href.slice(2); // Remove /#
             
@@ -41,7 +59,7 @@ export function NavLink({ href, children, isActive: externalIsActive }: NavLinkP
         }
     };
 
-    if (isHashLink) {
+    if (isHashLink || href === '/') {
         return (
             <a 
                 href={href} 
