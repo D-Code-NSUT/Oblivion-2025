@@ -35,10 +35,10 @@
     }
 }
 .flickerFreq {
-    animation: flicker 5s infinite;
+    animation: flicker 3s infinite;
 }
 .flicker {
-    animation: flicker 20s infinite;
+    animation: flicker 7s infinite;
 }
 .smoothFade {
   opacity: 0;

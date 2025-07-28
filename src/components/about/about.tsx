@@ -17,7 +17,7 @@ function About() {
     fearless pursuit.
     </>;
   return (
-    <div className='pt-30 w-full min-h-screen flex flex-col items-center overflow-hidden justify-center relative'>
+    <div className='pt-30 w-full mt-20 flex flex-col items-center overflow-hidden justify-center relative'>
         <Image
         className= {`absolute top-0 -left-40 opacity`}
             src="/aboutSectionBcg.png"
@@ -27,7 +27,7 @@ function About() {
             priority
         />
         <Image
-        className= {`absolute -top-40 left-10vw ${styles.smoothFade} ${hovered?styles.flickerFreq:styles.flicker} opacity-70`}
+        className= {`absolute -top-5 lg:-top-40 left-10vw ${styles.smoothFade} ${hovered?styles.flickerFreq:styles.flicker} opacity-70`}
             src="/lightning.png"
             alt="pspss"
             width={1000}

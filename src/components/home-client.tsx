@@ -11,6 +11,7 @@ import EventCard from '@/components/EventCard/EventCard';
 import Events from '@/components/Events/Events'; 
 import EventDetailsPopup from '@/components/EventDetailsPopup/EventDetailsPopup';
 import Image from 'next/image';
+import SponsorSection from './sponsorSection/sponsorSection';
 
 // you need to wrap the component with section tags
 
@@ -52,6 +53,12 @@ export default function HomeClient() {
       <section id="WhyToStep" className={`${styles.section} relative z-10`}>
         <div>
           <WhyToStep />
+        </div>
+      </section>
+
+      <section id="sponsi" className={`${styles.section} relative z-10`}>
+        <div>
+          <SponsorSection/>
         </div>
       </section>
 
