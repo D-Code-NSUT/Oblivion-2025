@@ -4,6 +4,66 @@
   position: relative;
 }
 
+.arrow-down {
+  position: absolute;
+  width: 100%;
+  height: 350px;
+  z-index: 100;
+  top: 100vh;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.arrow-down-1 {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  z-index: 100;
+  top: 5px;
+  left: 0;
+  margin-top: 0px;
+}
+
+.arrow-down-2 {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  z-index: 100;
+  top: 5px;
+  left: 0;
+  margin-top: 20px;
+}
+
+.arrow-down-3 {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  z-index: 100;
+  top: 5px;
+  left: 0;
+  margin-top: 150px;
+}
+
+.arrow-down-4 {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  z-index: 100;
+  top: 5px;
+  left: 0;
+  margin-top: 280px;
+}
+
+.arrow-down-5 {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  z-index: 100;
+  top: 5px;
+  left: 0;
+  margin-top: 400px;
+}
+
 .heroSection {
   height: 100vh;
   padding: 2rem;
@@ -105,13 +165,38 @@
   transform: translateY(-50%);
 }
 
-/* @media screen and (max-width: 950px) {
+@media screen and (max-width: 950px) {
     .featBlock1 {
         flex-direction: column;
     }
     
-    .arrow-down {
-        height: 250px;
-        top: 100vh;
+    .arrow-down-1 {
+        height: 150px;
+        top: 0px;
+        margin-top: 0px;
     }
-} */
+    
+    .arrow-down-2 {
+        height: 150px;
+        top: 0px;
+        margin-top: 10px;
+    }
+    
+    .arrow-down-3 {
+        height: 150px;
+        top: 0px;
+        margin-top: 85px;
+    }
+    
+    .arrow-down-4 {
+        height: 150px;
+        top: 0px;
+        margin-top: 140px;
+    }
+    
+    .arrow-down-5 {
+        height: 150px;
+        top: 0px;
+        margin-top: 200px;
+    }
+}

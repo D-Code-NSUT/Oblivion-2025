@@ -17,7 +17,7 @@ function About() {
     fearless pursuit.
     </>;
   return (
-    <div className='pt-30 w-full mt-80 flex flex-col items-center overflow-hidden justify-center relative'>
+    <div className={`pt-30 w-full mt-80 flex flex-col items-center overflow-hidden justify-center relative ${styles.aboutSection}`}>
         <Image
         className= {`absolute top-0 -left-40 opacity`}
             src="/aboutSectionBcg.png"

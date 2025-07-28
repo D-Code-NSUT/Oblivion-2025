@@ -44,3 +44,13 @@
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
+
+.aboutSection {
+    margin-top: 240px;
+}
+
+@media screen and (max-width: 880px) {
+    .aboutSection {
+        margin-top: 0px;
+    }
+}
