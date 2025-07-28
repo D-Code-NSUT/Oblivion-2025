@@ -25,14 +25,54 @@ export default function HomeClient() {
       <Hero />
       
       {/* Down Arrow between Home and About */}
-      <div className={styles['arrow-down']}>
+      <div className={styles['arrow-down']}> 
         <Image
-          src="/group-26.png"
-          alt="Down Arrow"
-          fill
-          style={{
-            opacity: 0.8,
-          }}
+      src="/rectangle-83.png"
+      alt="Down Arrow"
+      fill
+      style={{
+        opacity: 1,
+      }}
+        />
+      </div>
+      <div className={styles['arrow-down']} style={{marginTop: '20px'}}> 
+        <Image
+      src="/polygon-4.png"
+      alt="Down Arrow"
+      fill
+      style={{
+        opacity: 1,
+      }}
+        />
+      </div>
+      <div className={styles['arrow-down']} style={{marginTop: '170px'}}>
+        <Image
+      src="/polygon-3.png"
+      alt="Down Arrow"
+      fill
+      style={{
+        opacity: 1,
+      }}
+        />
+      </div>
+      <div className={styles['arrow-down']} style={{marginTop: '280px'}}>
+        <Image
+      src="/polygon-5.png"
+      alt="Down Arrow"
+      fill
+      style={{
+        opacity: 1,
+      }}
+        />
+      </div>
+      <div className={styles['arrow-down']} style={{marginTop: '400px'}}>
+        <Image
+      src="/polygon-6.png"
+      alt="Down Arrow"
+      fill
+      style={{
+        opacity: 1,
+      }}
         />
       </div>
       

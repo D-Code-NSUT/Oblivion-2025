@@ -17,7 +17,7 @@ function About() {
     fearless pursuit.
     </>;
   return (
-    <div className='pt-30 w-full mt-20 flex flex-col items-center overflow-hidden justify-center relative'>
+    <div className='pt-30 w-full mt-80 flex flex-col items-center overflow-hidden justify-center relative'>
         <Image
         className= {`absolute top-0 -left-40 opacity`}
             src="/aboutSectionBcg.png"
@@ -42,7 +42,7 @@ function About() {
             viewport={{ once: true }}
         >
         <Image
-            className="block relative mx-auto mb-10 w-[60%] max-w-[400] h-auto"
+            className="block relative mx-auto mb-10 mt-10 w-[60%] max-w-[400] h-auto"
             src="/group-23.svg"
             alt="pspss"
             width={300}
@@ -51,7 +51,7 @@ function About() {
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
         />
-        <div className='mx-auto mt-10   border-cyan-400 border-2 rounded-2xl backdrop-blur-md bg-white/3 
+        <div className='mx-auto mt-20   border-cyan-400 border-2 rounded-2xl backdrop-blur-md bg-white/3 
         text-center 
         text-l sm:text-l md:text-xl lg:text-3xl 
         tracking-wider 
