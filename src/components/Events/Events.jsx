@@ -1,28 +1,10 @@
 import React, { useRef } from 'react'
 import styles from './Events.module.css'
 import EventCard from '@/components/EventCard/EventCard';
+import useEventDetails from '@/hooks/useEventDetails';
 
 function Events() {
-  const eventDetails = [
-    {
-      name: "Hackathon"
-    },
-    {
-      name: "Ideathon"
-    },
-    {
-      name: "AI Ideathon"
-    },
-    {
-      name: "CP Contest"
-    },
-    {
-      name: "ML Hackathon"
-    },
-    {
-      name: "Useless Hackathon"
-    }
-  ]
+  const eventDetails = useEventDetails()
 
   const eventCardsRef = useRef(null)
 
