@@ -49,13 +49,13 @@ export default function HomeClient() {
         </div>
       </section>
 
-      <section id="WhyToStep" className={`${styles.section} relative z-10`}>
+      <section id="WhyToStep" className={`${styles.section}`}>
         <div>
           <WhyToStep />
         </div>
       </section>
 
-      <section id="join-community" className={`${styles.section} relative z-10`}>
+      <section id="join-community" className={`${styles.section}`}>
         <div>
           <JoinCommunity />
         </div>
