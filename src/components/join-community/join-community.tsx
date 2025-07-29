@@ -70,7 +70,7 @@ const JoinCommunity = () => {
               className="lg:w-[381px] lg:h-[381px] md:block hidden w-[320px] h-[320px]  z-10"
             />
             <div className="relative min-h-[80px]">
-              <BlueParticles className="absolute -top-1/2! right-0" />
+              <BlueParticles />
             </div>
           </div>
         </motion.div>

@@ -1,12 +1,12 @@
-// components/BlueParticles.tsx
 "use client";
 
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
+import type { Engine } from "tsparticles-engine"; 
 
-export default function BlueParticles({ className }: { className?: string }) {
-  const particlesInit = useCallback(async (engine) => {
+export default function BlueParticles() {
+  const particlesInit = useCallback(async (engine: Engine) => {
     await loadFull(engine);
   }, []);
 
@@ -32,15 +32,15 @@ export default function BlueParticles({ className }: { className?: string }) {
           },
         },
         emitters: {
-          direction: "top", // ✅ Move particles up
-          position: { x: 50, y: 100 }, // ✅ Bottom center
+          direction: "top",
+          position: { x: 50, y: 100 },
           rate: {
             delay: 0.2,
             quantity: 5,
           },
           size: {
-            width: 50, // ✅ Full width
-            height: 0, // ✅ Single horizontal line at bottom
+            width: 50,
+            height: 0,
           },
         },
       }}
