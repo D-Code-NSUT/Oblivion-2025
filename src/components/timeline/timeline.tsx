@@ -1,70 +1,88 @@
 import Image from "next/image";
 import React from "react";
+import TimelinePath from "./timeline-path";
+import { motion } from "motion/react";
 
 const TimeLine = () => {
   return (
     <div className="timeline-wrapper">
-      <div className="relative w-full bg-black xs:h-[1024px] h-[800px]">
+      <div className="relative w-full bg-black xs:h-[980px] h-[800px]">
         <Image
-          src="/timeline-pirate.png"
+          src="/pirate-image-timeline.png"
           alt="Timeline Pirate"
           width={500}
           height={500}
           className="absolute top-0 right-0  sm:w-max  w-full h-full  z-0"
         />
-        <div
-          style={{
-            background:
-              "linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.3) 100%)",
-          }}
-          className="absolute top-0 right-0 sm:w-[440px] h-[180px] w-full z-10"
-        ></div>
-        <div
-          style={{
-            background:
-              "linear-gradient(93.5deg, #000000 6.57%, rgba(0, 0, 0, 0.3) 96.44%)",
-          }}
-          className="absolute top-0 right-0 sm:w-[606px] xs:h-[1024px] h-[800px] w-full z-10"
-        ></div>
-        <div
-          style={{
-            background:
-              "linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0.3) 100%)",
-          }}
-          className="absolute -bottom-20 right-0 sm:w-[516px] h-[351px] w-full z-10"
-        ></div>
 
-        <div className="relative z-20 h-full">
-          <h1 className="uppercase font-pirata lg:text-[120px] xs:text-[100px] text-[80px] text-[#36B9C5] text-center pt-20">
+        <div className="relative z-20 h-full overflow-hidden">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 2 }}
+            viewport={{ once: true }}
+            className="uppercase font-pirata lg:text-[120px] xs:text-[100px] text-[70px] text-[#36B9C5] text-center pt-20"
+          >
             TIMELINE
-          </h1>
-          <Image
-            src="/timeline.png"
-            alt="Timeline Ship"
-            width={1200}
-            height={600}
-            className="absolute top-1/2  transform  -translate-y-1/2 w-full h-auto"
-          />
-          <h2 className="absolute md:top-[55%] top-[55%] md:left-[17%] left-[14%] text-[#5CE4FF] font-roboto font-bold lg:text-[32px] md:text-[26px] sm:text-[20px] xs:text-[16px] text-[14px]">
+          </motion.h1>
+          <TimelinePath />
+
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 2, delay: 0 }}
+            viewport={{ once: true }}
+            className="absolute md:top-[55%] top-[54%] md:left-[17%] left-[17%] text-[#5CE4FF] font-roboto font-bold lg:text-[30px] md:text-[22px] sm:text-[20px] xs:text-[16px] text-[14px]"
+          >
             29th August 2025
-          </h2>
-          <h2 className="absolute md:top-[60%] top-[57%] md:left-[17%] left-[14%] text-[#FFA02B] font-bebas lg:text-[69.93px] md:text-[50px] sm:text-[40px] xs:text-[28px] text-[26px]">
+          </motion.h2>
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 2.2, delay: 0 }}
+            viewport={{ once: true }}
+            className="absolute md:top-[58%] top-[57%] md:left-[17%] left-[17%] text-[#FFA02B] font-bebas lg:text-[55px] md:text-[45px] sm:text-[40px] xs:text-[28px] text-[26px]"
+          >
             DAY1: EMBARK
-          </h2>
+          </motion.h2>
 
-          <h2 className="absolute md:top-[40%] top-[43%] md:left-[36%] left-[33%] text-[#5CE4FF] font-roboto font-bold lg:text-[32px]  md:text-[26px] sm:text-[20px] xs:text-[16px] text-[14px]">
+          <motion.h2
+            initial={{ opacity: 0, y: 0 }}
+            whileInView={{ opacity: 1, y: 30 }}
+            transition={{ duration: 2, delay: 1 }}
+            viewport={{ once: true }}
+            className="absolute md:top-[40%] top-[42%] md:left-[36%] left-[40%] text-[#5CE4FF] font-roboto font-bold lg:text-[30px]  md:text-[22px] sm:text-[20px] xs:text-[16px] text-[14px]"
+          >
             30th August 2025
-          </h2>
-          <h2 className="absolute md:top-[31%] top-[40%] md:left-[36%] left-[33%] text-[#FFA02B] font-bebas lg:text-[69.93px] md:text-[50px] sm:text-[40px] xs:text-[28px] text-[26px]">
+          </motion.h2>
+          <motion.h2
+            initial={{ opacity: 0, y: 0 }}
+            whileInView={{ opacity: 1, y: 30 }}
+            transition={{ duration: 2.2, delay: 1 }}
+            viewport={{ once: true }}
+            className="absolute md:top-[34%] top-[38%] md:left-[36%] left-[40%] text-[#FFA02B] font-bebas lg:text-[55px] md:text-[45px] sm:text-[40px] xs:text-[28px] text-[26px]"
+          >
             DAY2: NAVIGATE
-          </h2>
+          </motion.h2>
 
-          <h2 className="absolute md:top-[55%] top-[55%] md:left-[58%] left-[57%] text-[#5CE4FF] font-roboto font-bold lg:text-[32px]  md:text-[26px] sm:text-[20px] xs:text-[16px] text-[14px]">
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 2, delay: 1.5 }}
+            viewport={{ once: true }}
+            className="absolute md:top-[55%] top-[54%] md:left-[58%] left-[65%] text-[#5CE4FF] font-roboto font-bold lg:text-[30px]  md:text-[22px] sm:text-[20px] xs:text-[16px] text-[14px]"
+          >
             31st August 2025
-          </h2>
-          <h2 className="absolute md:top-[60%] top-[57%] md:left-[58%] left-[57%] text-[#FFA02B] font-bebas lg:text-[69.93px] md:text-[50px] sm:text-[40px] xs:text-[28px] text-[26px]">
+          </motion.h2>
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 2.2, delay: 1.5 }}
+            viewport={{ once: true }}
+            className="absolute md:top-[58%] top-[57%] md:left-[58%] left-[65%] text-[#FFA02B] font-bebas lg:text-[55px] md:text-[45px] sm:text-[40px] xs:text-[28px] text-[26px]"
+          >
             DAY3: conquer
-          </h2>
+          </motion.h2>
         </div>
       </div>
     </div>
