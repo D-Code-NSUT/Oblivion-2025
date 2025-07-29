@@ -10,17 +10,17 @@ function About() {
     It will bring together developers and tech innovators for a dynamic showcase of their technical skills. 
     From conceptualizing amazing ideas to building intelligent solutions, participants collaborate, compete, 
     and explore the frontiers of modern technology.
-    <span className="block h-2 sm:h-4" />
+    {/* <span className="block h-2 sm:h-4" />
     Rooted in the theme <span className='font-bold text-cyan-500'>'Gothic Pirate Punk'</span>-Gothic Pirate Punk is 
     a world of stormy seas, crumbling shipwrecks, and fog-drenched skies, where ghostly pirates roam 
     with rebellion in their bones, Oblivion’25 stands for bold expression, radical creativity, and 
-    fearless pursuit.
+    fearless pursuit. */}
     </>;
   return (
-    <div className={`pt-30 w-full mt-80 flex flex-col items-center overflow-hidden justify-center relative ${styles.aboutSection}`}>
+    <div className={`pt-35 w-full mt-80 flex flex-col items-center overflow-hidden justify-center relative ${styles.aboutSection}`}>
         <Image
-        className= {`absolute top-0 -left-40 opacity`}
-            src="/aboutSectionBcg.png"
+        className= {`absolute top-10 -left-40 opacity`}
+            src="/abg.png"
             alt="pspss"
             width={700}
             height={0}
@@ -35,14 +35,15 @@ function About() {
             priority
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/100 via-black/40 to-black/100" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0),rgba(0,0,0,0),#000,#000)]" />
         <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 2 }}
             viewport={{ once: true }}
         >
         <Image
-            className="block relative mx-auto mb-10 mt-10 w-[60%] max-w-[400] h-auto"
+            className="block relative mx-auto mb-10 mt-10 w-[60%] max-w-[400] hover:drop-shadow-[0_0_12px_rgba(34,211,238,0.3)] drop-shadow-[0_0_15px_rgba(0,0,0,0.8) h-auto"
             src="/group-23.svg"
             alt="pspss"
             width={300}
@@ -54,8 +55,8 @@ function About() {
         <div className='mx-auto mt-20   border-cyan-400 border-2 rounded-2xl backdrop-blur-md bg-white/3 
         text-center 
         text-l sm:text-l md:text-xl lg:text-3xl 
-        tracking-wider 
-        leading-6 sm:leading-6 md:leading-6 lg:leading-8
+        tracking-widest  
+        leading-7 sm:leading-7 md:leading-8 lg:leading-10
         px-3 sm:px-3 md:px-5 lg:px-8 
         py-3 sm:py-3 md:py-4 lg:py-6 
         w-[90vw] sm:w-[90vw] md:w-[80vw] lg:w-[80vw] ' 

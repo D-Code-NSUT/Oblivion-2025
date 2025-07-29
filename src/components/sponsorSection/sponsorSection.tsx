@@ -9,10 +9,10 @@ function sponorCard(sponsorData:SponsorData,index:number,priority:number){
         priority==2? 'my-4 w-[26vw]':
         priority==3? 'my-3 w-[20vw]':'my-3 w-[15vw]'
     }`} key={index}>
-        <div className={`bg-cyan-900/30 pb-2  drop-shadow-[0_0_10px_rgba(34,211,238,0.3)] hover:drop-shadow-[0_0_10px_rgba(34,211,238,0.7)] flex flex-col h-full relative justify-between ${
-            priority==1?'w-[25vw] ':
-            priority==2?'w-[20vw]':
-            priority==3?'min-w-[15vw] md:min-w-[15vw] lg:min-w-[15vw] px-3 pb-3 pt-5':'min-w-[80%] max-w-[90%] px-3 pb-3 pt-5'} overflow-hidden  mx-auto rounded-3xl border-cyan-700 border-3 items-center`}>    
+        <div className={`bg-cyan-900/30 pb-2 transiton drop-shadow-[0_0_15px_rgba(34,211,238,0.5)] hover:drop-shadow-[0_0_15px_rgba(34,211,238,0.9)] duration-400 flex flex-col h-full relative justify-between ${
+            priority==1?'w-[30vw] md:w-[25vw] lg:w-[25vw] ':
+            priority==2?'w-[23vw] md:w-[20vw] lg:w-[20vw]':
+            priority==3?'min-w-[15vw] md:min-w-[15vw] lg:min-w-[15vw] px-3 pb-3 pt-5':'min-w-[80%] max-w-[90%] md:px-2 lg:px-3 pb-3 pt-5'} overflow-hidden  mx-auto rounded-3xl border-cyan-700 border-3 items-center`}>    
             
             <Image
                 src="/sponsiBcg.png"
@@ -22,8 +22,12 @@ function sponorCard(sponsorData:SponsorData,index:number,priority:number){
                 quality={100}
             />
             
-            { priority<3 && <div className={`title drop-shadow-[0_0_10px_rgba(34,211,238,0.3)] font-bold  md:text-xl lg:text-xl z-10 w-full lg:w-fit text-center mb-3 px-4 py-1 border-b-3 border-cyan-700 md:border-3 md:border-t-0 lg:border-3 lg:border-t-0 bg-cyan-950/80 ${'md:rounded-b-xl'} lg:rounded-b-xl`}>{sponsorData.title||"Title Sponsor"}</div>}
-            <Image  className='mx-auto z-10 hover: w-[100%] md:w-[70%] h-auto lg:w-[50%] drop-shadow-[0_0_10px_rgba(0,0,0,0.8)]' src={'/oblivion.png'} alt={sponsorData.name||""} quality={100} width={800} height={800}/>
+            { priority<3 && <div className={`text-sm
+              drop-shadow-[0_0_12px_rgba(34,211,238,0.3)] whitespace-normal font-bold  md:text-xl lg:text-xl 
+              z-10 w-full lg:w-fit text-center mb-3 px-1 md:px-4 lg:px-4 py-1 border-b-3 border-cyan-700
+               md:border-3 md:border-t-0 lg:border-3 lg:border-t-0 bg-[rgba(16,66,82,0.7)]
+] ${'md:rounded-b-xl'} lg:rounded-b-xl`}>{sponsorData.title||"Title Sponsor"}</div>}
+            <Image  className='sponser z-10 w-full  md:w-[70%] h-auto lg:w-[50%] drop-shadow-[0_0_10px_rgba(0,0,0,0.8)]' src={sponsorData.image} alt={sponsorData.name||""} quality={100} width={800} height={800}/>
             {/*<div className='w-[90%] my-1 text-center name px-1 z-10 '>{sponsorData.name}</div>*/}
         </div>
     </div>)
