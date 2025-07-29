@@ -84,7 +84,7 @@ export default function Loading() {
     >
       <img
         ref={imageRef}
-        src= "\helm.png"
+        src= "public\helm.png"
         alt="Rotating Helm"
         className="w-32 h-32 mb-4"
       />
