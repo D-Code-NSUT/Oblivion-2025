@@ -4,20 +4,73 @@ import Image from 'next/image';
 
 export default function ContactUs() {
     return (
-        <div className={styles.container}>
-            <Image
-                src="/contact-us.png"
-                alt='Contact Us Background'
-                fill
+        <div className={styles.container} style={{position: 'relative', overflow: 'hidden'}}>
+            {/* Background image with lower z-index */}
+            <div style={{position: 'absolute', inset: 0, zIndex: 0}}>
+                <Image
+                    src="/contact-us.png"
+                    alt='Contact Us Background'
+                    fill
+                    style={{
+                        objectFit: 'cover',
+                        objectPosition: 'center',
+                    }}
+                    quality={100}
+                    priority
+                />
+            </div>
+
+            {/* Contact heading above background */}
+            <div
+                className={styles.contactHeading}
                 style={{
-                    objectFit: 'cover',
-                    objectPosition: 'center',
+                    position: 'relative',
+                    zIndex: 2,
+                    width: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginTop: '50px',
                 }}
-                quality={100}
-                priority
-            />
-            
-            <div className={styles.socialButtons}>
+            >
+                <Image
+                    src="/image-31.png"
+                    alt='Contact Us Top Border'
+                    width={450}
+                    height={30}
+                    className={styles.contactBorder}
+                    style={{ position:'relative',top:'40px' }}
+                />
+                <Image
+                    src="/contact-us-heading.png"
+                    alt='Contact Us Heading'
+                    width={500}
+                    height={100}
+                    className={styles.contactHeadingImage}
+                />
+                <Image
+                    src="/image-31.png"
+                    alt='Contact Us Bottom Border'
+                    width={450}
+                    height={30}
+                    className={styles.contactBorder}
+                    style={{ position:'relative',top:'-40px' }}
+                />
+            </div>
+
+            <div
+                className={styles.socialButtons}
+                style={{
+                    position: 'relative',
+                    zIndex: 2,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '24px',
+                    width: '100%',
+                }}
+            >
                 <a 
                     href="https://instagram.com" 
                     target="_blank" 
