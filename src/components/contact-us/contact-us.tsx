@@ -34,29 +34,33 @@ export default function ContactUs() {
                     marginTop: '50px',
                 }}
             >
-                <Image
-                    src="/image-31.png"
-                    alt='Contact Us Top Border'
-                    width={450}
-                    height={30}
-                    className={styles.contactBorder}
-                    style={{ position:'relative',top:'40px' }}
-                />
-                <Image
-                    src="/contact-us-heading.png"
-                    alt='Contact Us Heading'
-                    width={500}
-                    height={100}
-                    className={styles.contactHeadingImage}
-                />
-                <Image
-                    src="/image-31.png"
-                    alt='Contact Us Bottom Border'
-                    width={450}
-                    height={30}
-                    className={styles.contactBorder}
-                    style={{ position:'relative',top:'-40px' }}
-                />
+                <div className={styles.contactBorderContainer}>
+                    <Image
+                        src="/image-31.png"
+                        alt='Contact Us Top Border'
+                        fill
+                        className={styles.contactBorder}
+                        style={{ top:'40px',objectFit: 'fill' }}
+                    />
+                </div>
+                <div className={styles.contactHeadingText}>
+                    <Image
+                        src="/contact-us-heading.png"
+                        alt='Contact Us Heading'
+                        fill
+                        className={styles.contactHeadingImage}
+                        style={{ objectFit: 'fill' }}
+                    />
+                </div>
+                <div className={styles.contactBorderContainer}>
+                    <Image
+                        src="/image-31.png"
+                        alt='Contact Us Bottom Border'
+                        fill
+                        className={styles.contactBorder}
+                        style={{ top:'-40px',objectFit: 'fill' }}
+                    />
+                </div>
             </div>
 
             <div

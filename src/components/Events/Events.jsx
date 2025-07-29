@@ -13,6 +13,7 @@ function Events() {
   const [isReturning, setIsReturning] = useState(false) // For high-speed return
   const [hasEntrance, setHasEntrance] = useState(false) // For entrance animation
   const [isMounted, setIsMounted] = useState(false) // For hydration safety
+  const [isPaused, setIsPaused] = useState(false) // For pause at the end
 
   // Use original events array (no duplication for finite effect)
   const events = eventDetails
@@ -63,9 +64,13 @@ function Events() {
       setScrollPosition(scrollLeft)
 
       // Check if we've reached the end (last card fully visible)
-      if (scrollLeft >= maxScroll - 10 && !isReturning) {
-        setIsReturning(true) // Start high-speed return
-        setAnimationDirection(-1) // Change to left direction
+      if (scrollLeft >= maxScroll - 10 && !isReturning && !isPaused) {
+        setIsPaused(true) // Pause at the end
+        setTimeout(() => {
+          setIsPaused(false)
+          setIsReturning(true) // Start high-speed return
+          setAnimationDirection(-1) // Change to left direction
+        }, 2000) // 2 second pause before returning
       } else if (scrollLeft <= 10 && isReturning) {
         setIsReturning(false) // End high-speed return
         setAnimationDirection(1) // Change to right direction
@@ -75,15 +80,14 @@ function Events() {
     // Auto-scroll animation with direction change
     const autoScroll = () => {
       // Don't start auto-scroll until entrance animation is complete
-      if (!isHovered && container && hasEntrance) {
+      if (!isHovered && container && hasEntrance && !isPaused) {
         const currentScroll = container.scrollLeft
         const maxScroll = container.scrollWidth - container.clientWidth
 
         if (animationDirection === 1) {
           // Moving right (normal speed)
           if (currentScroll >= maxScroll - 1) {
-            setIsReturning(true)
-            setAnimationDirection(-1)
+            // This will be handled by handleScroll function
           } else {
             container.scrollLeft += 1.5 // Normal speed
           }
@@ -116,7 +120,7 @@ function Events() {
       clearInterval(scrollInterval)
       container.removeEventListener('scroll', handleScroll)
     }
-  }, [isHovered, animationDirection, isReturning, hasEntrance])
+  }, [isHovered, animationDirection, isReturning, hasEntrance, isPaused])
 
   const scrollLeft = () => {
     if (eventCardsRef.current) {
