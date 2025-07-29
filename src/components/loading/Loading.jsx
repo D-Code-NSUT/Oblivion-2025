@@ -3,8 +3,6 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
 
-import styles from "./Loading.module.css";
-
 export default function Loading() {
     const imageRef = useRef(null);
   const textRef = useRef(null);
@@ -90,7 +88,7 @@ export default function Loading() {
       />
       <div
         ref={textRef}
-        className="text-xl font-semibold opacity-0 text-gray-800"
+        className="text-5xl font-semibold opacity-0 text-gray-800"
       >
         Unleashing the madness
       </div>
