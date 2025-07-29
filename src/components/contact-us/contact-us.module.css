@@ -6,9 +6,6 @@
 
 .socialButtons {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     display: flex;
     gap: 30px;
     z-index: 10;
@@ -21,14 +18,15 @@
     width: 80px;
     height: 80px;
     border-radius: 24px;
-    background: rgba(35, 74, 78, 0.5);
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(0.4); 
+    -webkit-backdrop-filter: blur(0.4);
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
     transition: all 0.3s ease;
     text-decoration: none;
     position: relative;
     z-index: 1;
+    border: 1px solid rgba(177,242,255,0.5);
 }
 
 .socialButton::before{
