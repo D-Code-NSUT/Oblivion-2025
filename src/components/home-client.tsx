@@ -168,12 +168,11 @@ export default function HomeClient() {
         </div>
       </section>
 
-      <section id="WhyToStep" className={`${styles.section} relative z-10`}>
+      <section id="WhyToStep" className={`${styles.section}`}>
         <div>
           <WhyToStep />
         </div>
       </section>
-
       <section id="sponsors" className={`${styles.section} relative z-10`}>
         <div>
           <SponsorSection/>
@@ -181,6 +180,7 @@ export default function HomeClient() {
       </section>
 
       <section id="join-community" className={`${styles.section} relative z-10`}>
+
         <div>
           <JoinCommunity />
         </div>

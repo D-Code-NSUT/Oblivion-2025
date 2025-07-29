@@ -1,12 +1,122 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import styles from './Events.module.css'
 import EventCard from '@/components/EventCard/EventCard';
 import useEventDetails from '@/hooks/useEventDetails';
 
 function Events() {
   const eventDetails = useEventDetails()
-
   const eventCardsRef = useRef(null)
+  const eventsContainerRef = useRef(null) // Ref for intersection observer
+  const [isHovered, setIsHovered] = useState(false)
+  const [scrollPosition, setScrollPosition] = useState(0)
+  const [animationDirection, setAnimationDirection] = useState(1) // 1 for right, -1 for left
+  const [isReturning, setIsReturning] = useState(false) // For high-speed return
+  const [hasEntrance, setHasEntrance] = useState(false) // For entrance animation
+  const [isMounted, setIsMounted] = useState(false) // For hydration safety
+
+  // Use original events array (no duplication for finite effect)
+  const events = eventDetails
+
+  // Handle client-side mounting
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
+  // Entrance animation effect - triggered when section comes into view
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasEntrance) {
+            // Delay the animation slightly for better effect
+            setTimeout(() => {
+              setHasEntrance(true)
+            }, 200)
+          }
+        })
+      },
+      {
+        threshold: 0.1, // Trigger when only 10% of the element is visible (earlier)
+        rootMargin: '0px 0px -50px 0px' // Trigger even earlier - less negative margin
+      }
+    )
+
+    if (eventsContainerRef.current) {
+      observer.observe(eventsContainerRef.current)
+    }
+
+    return () => {
+      if (eventsContainerRef.current) {
+        observer.unobserve(eventsContainerRef.current)
+      }
+    }
+  }, [hasEntrance])
+
+  useEffect(() => {
+    const container = eventCardsRef.current
+    if (!container) return
+
+    const handleScroll = () => {
+      const scrollLeft = container.scrollLeft
+      const maxScroll = container.scrollWidth - container.clientWidth
+
+      setScrollPosition(scrollLeft)
+
+      // Check if we've reached the end (last card fully visible)
+      if (scrollLeft >= maxScroll - 10 && !isReturning) {
+        setIsReturning(true) // Start high-speed return
+        setAnimationDirection(-1) // Change to left direction
+      } else if (scrollLeft <= 10 && isReturning) {
+        setIsReturning(false) // End high-speed return
+        setAnimationDirection(1) // Change to right direction
+      }
+    }
+
+    // Auto-scroll animation with direction change
+    const autoScroll = () => {
+      // Don't start auto-scroll until entrance animation is complete
+      if (!isHovered && container && hasEntrance) {
+        const currentScroll = container.scrollLeft
+        const maxScroll = container.scrollWidth - container.clientWidth
+
+        if (animationDirection === 1) {
+          // Moving right (normal speed)
+          if (currentScroll >= maxScroll - 1) {
+            setIsReturning(true)
+            setAnimationDirection(-1)
+          } else {
+            container.scrollLeft += 1.5 // Normal speed
+          }
+        } else {
+          // Moving left
+          if (isReturning) {
+            // High-speed return to original position
+            if (currentScroll <= 1) {
+              setIsReturning(false)
+              setAnimationDirection(1)
+            } else {
+              container.scrollLeft -= 8 // Very high speed for return
+            }
+          } else {
+            // This case shouldn't happen with new logic, but keeping for safety
+            if (currentScroll <= 1) {
+              setAnimationDirection(1)
+            } else {
+              container.scrollLeft -= 1.5
+            }
+          }
+        }
+      }
+    }
+
+    const scrollInterval = setInterval(autoScroll, isReturning ? 10 : 25) // Very fast interval during return
+    container.addEventListener('scroll', handleScroll)
+
+    return () => {
+      clearInterval(scrollInterval)
+      container.removeEventListener('scroll', handleScroll)
+    }
+  }, [isHovered, animationDirection, isReturning, hasEntrance])
 
   const scrollLeft = () => {
     if (eventCardsRef.current) {
@@ -20,38 +130,64 @@ function Events() {
   }
 
   return (
-    <div className='min-h-screen flex flex-col justify-center items-center'>
-      <h1 className={`${styles['pirata-one-regular']} text-[120px] text-[#36B9C5]`}>Events</h1>
+    <div ref={eventsContainerRef} className='min-h-screen flex flex-col justify-center items-center relative pb-8'>
+      <div className='w-full flex flex-col items-center relative z-10 px-4'>
+        <h1 
+          className={`text-[60px] md:text-[120px] text-[#36B9C5] mb-2 md:mb-4 text-center ${isMounted ? styles['pirata-one-regular'] : ''}`}
+          suppressHydrationWarning
+        >
+          Events
+        </h1>
 
-      <div className='eventsContainer flex items-center gap-4'>
-        <div
-          onClick={scrollLeft}
-          className='border-2 border-white/40 py-2 px-3 cursor-pointer hover:border-cyan-400 transition-colors'>
-          <svg
-            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff" fill="none">
-            <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
-          </svg>
-        </div>
+        <div className='eventsContainer flex items-center gap-2 md:gap-4 w-full justify-center max-w-7xl'>
+          {/* Left Arrow - Hidden on mobile */}
+          <div
+            onClick={scrollLeft}
+            className='hidden md:block border-2 border-white/40 py-2 px-3 cursor-pointer hover:border-cyan-400 transition-colors'>
+            <svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff" fill="none">
+              <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
+            </svg>
+          </div>
 
-        <div
-          ref={eventCardsRef}
-          style={{
-            scrollbarWidth: 'none',
-          }}
-          className="eventCards flex  gap-5 max-w-[75vw]  overflow-x-auto overflow-y-visible flex-shrink-0 scroll-smooth py-8 px-4">
-          {eventDetails.map((event,index) => (
-            <EventCard key={index} name = {event.name}/>
-          ))}
+          {/* Events Container */}
+          <div className='relative w-full max-w-[90vw] md:max-w-[75vw] overflow-hidden min-w-[320px] md:min-w-[600px]'>
+            {/* Left gradient overlay */}
+            <div className='absolute left-0 top-0 bottom-0 w-6 md:w-12 bg-gradient-to-r from-slate-900/90 via-slate-800/40 to-transparent z-10 pointer-events-none'></div>
 
-        </div>
+            {/* Right gradient overlay */}
+            <div className='absolute right-0 top-0 bottom-0 w-6 md:w-12 bg-gradient-to-l from-slate-900/90 via-slate-800/40 to-transparent z-10 pointer-events-none'></div>
 
-        <div
-          onClick={scrollRight}
-          className='border-2 border-white/40 py-2 px-3 cursor-pointer hover:border-cyan-400 transition-colors'>
-          <svg
-            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff" fill="none">
-            <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
-          </svg>
+            <div
+              ref={eventCardsRef}
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+              style={{
+                scrollbarWidth: 'none',
+              }}
+              className={`eventCards flex gap-3 md:gap-5 overflow-x-auto overflow-y-visible flex-shrink-0 py-4 md:py-8 px-2 md:px-4 min-h-[320px] md:min-h-[450px] transition-transform duration-1000 ease-out ${hasEntrance ? 'translate-x-0' : '-translate-x-full'}`}
+            >
+              {events.map((event, index) => (
+                <div 
+                  key={`${event.name}-${index}`} 
+                  className={`flex-shrink-0 transition-all duration-1000 ease-out ${hasEntrance ? 'translate-x-0 opacity-100' : '-translate-x-20 opacity-0'}`}
+                  style={{ transitionDelay: `${index * 100}ms` }}
+                >
+                  <EventCard name={event.name} />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right Arrow - Hidden on mobile */}
+          <div
+            onClick={scrollRight}
+            className='hidden md:block border-2 border-white/40 py-2 px-3 cursor-pointer hover:border-cyan-400 transition-colors'>
+            <svg
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff" fill="none">
+              <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="#ffffff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
+            </svg>
+          </div>
         </div>
       </div>
     </div>

@@ -5,3 +5,20 @@
   font-weight: 400;
   font-style: normal;
 }
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-right {
+  animation: scrollRight 30s linear infinite;
+}
+
+.animate-scroll-right:hover {
+  animation-play-state: paused;
+}
