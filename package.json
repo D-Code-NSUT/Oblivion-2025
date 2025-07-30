@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "@react-three/drei": "^10.5.2",
     "critters": "^0.0.23",
     "framer-motion": "^12.23.6",
