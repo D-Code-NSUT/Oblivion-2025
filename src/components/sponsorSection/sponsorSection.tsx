@@ -36,7 +36,22 @@ function sponorCard(sponsorData:SponsorData,index:number,priority:number){
 function SponsorSection() {
   
     return (
-        <div className={`h-fit w-full pb-15 pt-50 bg-repeat-y lg:bg-[length:100%_auto] bg-[url(/homeSponsiBcg.png)]`}>
+        <div className={`h-full w-full pb-15 pt-50 bg-repeat-y lg:bg-[length:100%_auto]`}>
+            <Image 
+                src="/homeSponsiBcg.png"
+                alt="Hero Background"
+                fill
+                style={{
+                    objectFit: 'cover',
+                    objectPosition: 'center',
+                    display: 'block',
+                    zIndex: -3,
+                    width: '100%',
+                    height: '100%',
+                }}
+                quality={100}
+                priority
+            />
            <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
