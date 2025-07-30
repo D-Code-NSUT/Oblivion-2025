@@ -27,13 +27,6 @@ export const sponsorsData = {
       link: "https://microsoft.com",
       custom: "",
     },
-    {
-      title: "Diamond",
-      name: "Google",
-      image: "/oblivion.png",
-      link: "https://google.com",
-      custom: "",
-    },
   ],
 
   second: [
@@ -58,92 +51,14 @@ export const sponsorsData = {
       link: "https://notion.so",
       custom: "",
     },
-    {
-      title: "Innovation Sponsor",
-      name: "Stripe Payments",
-      image: "/oblivion.png",
-      link: "https://stripe.com",
-      custom: "",
-    },
-    {
-      title: "Media Partner",
-      name: "Hashnode",
-      image: "/oblivion.png",
-      link: "https://hashnode.com",
-      custom: "",
-    },
+    
   ],
 
   third: [
-    {
-      name: "Tailwind Labs",
-      image: "/oblivion.png",
-      link: "https://tailwindcss.com",
-      custom: "",
-    },
-    {
-      name: "Render",
-      image: "/oblivion.png",
-      link: "https://render.com",
-      custom: "",
-    },
-    {
-      name: "Clerk Auth",
-      image: "/oblivion.png",
-      link: "https://clerk.dev",
-      custom: "",
-    },
-    {
-      name: "Auth0",
-      image: "/oblivion.png",
-      link: "https://auth0.com",
-      custom: "",
-    },
-    {
-      name: "DigitalOcean",
-      image: "/oblivion.png",
-      link: "https://digitalocean.com",
-      custom: "",
-    },
-    {
-      name: "Linear",
-      image: "/oblivion.png",
-      link: "https://linear.app",
-      custom: "",
-    },
-    {
-      name: "Sentry",
-      image: "/oblivion.png",
-      link: "https://sentry.io",
-      custom: "",
-    },
+    
   ],
 
   last: [
-    {
-      name: "Figma",
-      image: "/oblivion.png",
-      link: "https://figma.com",
-      custom: "",
-    },
-    {
-      name: "Cloudflare",
-      image: "/oblivion.png",
-      link: "https://cloudflare.com",
-      custom: "",
-    },
-    {
-      name: "Postman",
-      image: "/oblivion.png",
-      link: "https://postman.com",
-      custom: "",
-    },
-    {
-      name: "Canva",
-      image: "/oblivion.png",
-      link: "https://canva.com",
-      custom: "",
-    },
     {
       name: "Github",
       image: "/oblivion.png",

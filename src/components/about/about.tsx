@@ -27,10 +27,10 @@ function About() {
             priority
         />
         <Image
-        className= {`absolute -top-5 lg:-top-40 left-10vw ${styles.smoothFade} ${hovered?styles.flickerFreq:styles.flicker} opacity-70`}
+        className= {`absolute top-2 lg:-top-40 left-10vw ${styles.smoothFade} ${hovered?styles.flickerFreq:styles.flicker} opacity-70`}
             src="/lightning.png"
             alt="pspss"
-            width={1000}
+            width={1500}
             height={0}
             priority
         />
@@ -43,7 +43,7 @@ function About() {
             viewport={{ once: true }}
         >
         <Image
-            className="block relative mx-auto mb-10 mt-10 w-[60%] max-w-[400] hover:drop-shadow-[0_0_12px_rgba(34,211,238,0.3)] drop-shadow-[0_0_15px_rgba(0,0,0,0.8) h-auto"
+            className="block relative mx-auto mb-10 mt-10 w-[60%] max-w-[550] transiton duration-300 hover:drop-shadow-[0_0_20px_rgba(34,211,238,0.5)] drop-shadow-[0_0_15px_rgba(0,0,0,0.8) h-auto"
             src="/group-23.svg"
             alt="pspss"
             width={300}
@@ -52,7 +52,7 @@ function About() {
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
         />
-        <div className='mx-auto mt-20   border-cyan-400 border-2 rounded-2xl backdrop-blur-md bg-white/3 
+        <div className='mx-auto lg:mt-20   border-cyan-400 border-2 rounded-2xl backdrop-blur-md bg-white/3 
         text-center 
         text-l sm:text-l md:text-xl lg:text-3xl 
         tracking-widest  
