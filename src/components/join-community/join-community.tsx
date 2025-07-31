@@ -35,7 +35,7 @@ const JoinCommunity = () => {
                 latest announcements, event highlights,
               </span>{" "}
               and exclusive insights from Oblivion—the flagship tech event of
-              D'Code NSUT! Set sail into Silicon Sea of uncharted tech
+              D&#39;Code NSUT! Set sail into Silicon Sea of uncharted tech
               territories. Dare to drift into the abyss.
             </p>
 

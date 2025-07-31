@@ -1,5 +1,6 @@
 "use client";
 import Modal from '../util/modal/modal';
+import Link from 'next/link';
 import { NavLink } from './nav-link';
 import styles from './nav.module.css';
 import Image from 'next/image';
@@ -167,7 +168,7 @@ export default function Nav() {
                             objectPosition: 'center',
                         }} src={"/oblivion.png"} alt='Olivion Icon'  fill />
                     </div>
-                    <a href="/">Olivion</a>
+                    <Link href="/">Olivion</Link>
                 </div>
                 <div className={styles.navLinks}>
                     <NavLink href="/" isActive={isNavLinkActive('/')}>Home</NavLink>

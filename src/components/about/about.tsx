@@ -6,7 +6,7 @@ import styles from  '@/components/about/about.module.css'
 function About() {
     const [hovered,setHovered] = React.useState(false);
  const content = <>
-    D'Code NSUT presents OBLIVION 2025, our flagship <span className='font-bold text-cyan-500'>Tech Summit</span> of the year. 
+    D&#39;Code NSUT presents OBLIVION 2025, our flagship <span className='font-bold text-cyan-500'>Tech Summit</span> of the year. 
     It will bring together developers and tech innovators for a dynamic showcase of their technical skills. 
     From conceptualizing amazing ideas to building intelligent solutions, participants collaborate, compete, 
     and explore the frontiers of modern technology.

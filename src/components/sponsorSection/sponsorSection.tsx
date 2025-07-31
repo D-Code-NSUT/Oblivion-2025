@@ -58,7 +58,7 @@ function SponsorSection() {
             transition={{ duration: 2 }}
             viewport={{ once: true }}>
              <div className={` text-[60px] md:text-[120px] transiton duration-300 hover:drop-shadow-[0_0_20px_rgba(34,211,238,0.5)] text-[#36B9C5] mb-2 md:mb-4 text-center ${styles['pirata-one-regular']}`}>
-                OBLIVION'25 SPONSORS
+                OBLIVION&#39;25 SPONSORS
             </div>
             </motion.div>
             <motion.div
