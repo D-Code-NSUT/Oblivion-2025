@@ -32,7 +32,7 @@ const TimeLine = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 2, delay: 0 }}
             viewport={{ once: true }}
-            className="absolute md:top-[55%] top-[54%] md:left-[18%] left-[17%] text-[#5CE4FF] font-roboto font-bold lg:text-[30px] md:text-[22px] sm:text-[20px] xs:text-[16px] text-[14px]"
+            className="absolute md:top-[55%] sm:top-[54%] top-[53%] md:left-[18%] sm:left-[15%] left-[16%] text-[#5CE4FF] font-roboto font-bold lg:text-[30px] md:text-[22px] sm:text-[20px] xs:text-[16px] text-[14px]"
           >
             29th August 2025
           </motion.h2>
@@ -41,7 +41,7 @@ const TimeLine = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 2.2, delay: 0 }}
             viewport={{ once: true }}
-            className="absolute md:top-[59%] top-[57%] md:left-[18%] left-[17%] text-[#FFA02B] font-bebas lg:text-[55px] md:text-[45px] sm:text-[40px] xs:text-[28px] text-[26px]"
+            className="absolute md:top-[59%] sm:top-[57%] top-[55.5%] md:left-[18%] sm:left-[15%] left-[16%] text-[#FFA02B] font-bebas lg:text-[55px] md:text-[45px] sm:text-[40px] xs:text-[28px] text-[26px]"
           >
             DAY1: EMBARK
           </motion.h2>
@@ -51,7 +51,7 @@ const TimeLine = () => {
             whileInView={{ opacity: 1, y: 30 }}
             transition={{ duration: 2, delay: 1 }}
             viewport={{ once: true }}
-            className="absolute md:top-[38%] top-[42%] md:left-[37%] left-[40%] text-[#5CE4FF] font-roboto font-bold lg:text-[30px]  md:text-[22px] sm:text-[20px] xs:text-[16px] text-[14px]"
+            className="absolute md:top-[38%] sm:top-[40%] top-[41%] md:left-[37%] sm:left-[35%] left-[40%] text-[#5CE4FF] font-roboto font-bold lg:text-[30px]  md:text-[22px] sm:text-[20px] xs:text-[16px] text-[14px]"
           >
             30th August 2025
           </motion.h2>
@@ -60,7 +60,7 @@ const TimeLine = () => {
             whileInView={{ opacity: 1, y: 30 }}
             transition={{ duration: 2.2, delay: 1 }}
             viewport={{ once: true }}
-            className="absolute md:top-[31%] top-[38%] md:left-[37%] left-[40%] text-[#FFA02B] font-bebas lg:text-[55px] md:text-[45px] sm:text-[40px] xs:text-[28px] text-[26px]"
+            className="absolute md:top-[31%] sm:top-[35%] top-[37.5%] md:left-[37%] sm:left-[35%] left-[40%] text-[#FFA02B] font-bebas lg:text-[55px] md:text-[45px] sm:text-[40px] xs:text-[28px] text-[26px]"
           >
             DAY2: NAVIGATE
           </motion.h2>
@@ -70,7 +70,7 @@ const TimeLine = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 2, delay: 1.5 }}
             viewport={{ once: true }}
-            className="absolute md:top-[55%] top-[54%] md:left-[59%] left-[65%] text-[#5CE4FF] font-roboto font-bold lg:text-[30px]  md:text-[22px] sm:text-[20px] xs:text-[16px] text-[14px]"
+            className="absolute md:top-[55%] sm:top-[54%] top-[53%] md:left-[59%] sm:left-[56%] left-[67%] text-[#5CE4FF] font-roboto font-bold lg:text-[30px]  md:text-[22px] sm:text-[20px] xs:text-[16px] text-[14px]"
           >
             31st August 2025
           </motion.h2>
@@ -79,7 +79,7 @@ const TimeLine = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 2.2, delay: 1.5 }}
             viewport={{ once: true }}
-            className="absolute md:top-[59%] top-[57%] md:left-[59%] left-[65%] text-[#FFA02B] font-bebas lg:text-[55px] md:text-[45px] sm:text-[40px] xs:text-[28px] text-[26px]"
+            className="absolute md:top-[59%] sm:top-[57%] top-[55.5%] md:left-[59%] sm:left-[56%] left-[67%] text-[#FFA02B] font-bebas lg:text-[55px] md:text-[45px] sm:text-[40px] xs:text-[28px] text-[26px]"
           >
             DAY3: conquer
           </motion.h2>

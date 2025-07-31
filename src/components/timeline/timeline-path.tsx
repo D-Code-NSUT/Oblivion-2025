@@ -23,7 +23,7 @@ const TimelinePath = () => {
   useEffect(() => {
     ScrollTrigger.create({
       trigger: shipRef.current,
-      start: "top 80%", 
+      start: "top 80%",
       once: true,
       onEnter: () => {
         gsap.to(shipRef.current, {
@@ -43,7 +43,6 @@ const TimelinePath = () => {
 
   return (
     <>
-
       <svg
         viewBox="0 0 1439 555"
         fill="none"
@@ -486,9 +485,9 @@ const TimelinePath = () => {
       <img
         src="/ship-icon.png"
         ref={shipRef}
-        alt="Ship"
+        alt="Ship Icon"
         className="absolute md:w-[240px] w-[200px] h-auto"
-        style={{ top: 0, left: 0 }}
+        // style={{ top: 0, left: 0 }}
       />
     </>
   );

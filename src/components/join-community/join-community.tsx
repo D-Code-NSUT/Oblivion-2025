@@ -55,15 +55,15 @@ const JoinCommunity = () => {
             <img
               src="/oblivion.png"
               alt="Join Community"
-              className="sm:w-[310px] sm:h-[310px] xs:w-[300px] w-[250px] xs:h-[300px] h-[250px] object-contain"
+              className="sm:w-[300px] sm:h-[300px] xs:w-[250px] w-[200px] xs:h-[250px] h-[200px] object-contain"
             />
             <img
               src="/oblivion-text-white.png"
               alt="Join Community"
-              className="xs:w-[270px] xs:h-[55px] w-[240px]  object-contain"
+              className="xs:w-[270px] xs:h-[55px] w-[200px] object-contain"
             />
           </div>
-          <div className="absolute -bottom-80 lg:-bottom-60 -right-16 lg:-right-37">
+          <div className="absolute -bottom-80 -right-16 lg:-right-37">
             <img
               src="/treasure-chest.png"
               alt="Treasure Chest"
