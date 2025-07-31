@@ -47,7 +47,7 @@ const TimelinePath = () => {
         viewBox="0 0 1439 555"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute top-1/2  transform  -translate-y-1/2 overflow-hidden sm:scale-100 scale-120 sm:left-0 left-10  w-screen h-auto"
+        className="absolute top-1/2  transform  -translate-y-1/2 overflow-hidden sm:scale-100 scale-120 sm:left-0 xs:left-10 left-5  w-screen h-auto"
       >
         <g opacity="0.2" filter="url(#filter0_dddddd_9_225)">
           <circle cx="964.144" cy="271.516" r="38.229" fill="#5CE4FF" />
@@ -486,7 +486,7 @@ const TimelinePath = () => {
         src="/ship-icon.png"
         ref={shipRef}
         alt="Ship Icon"
-        className="absolute md:w-[240px] w-[200px] h-auto"
+        className="absolute md:w-[240px] xs:w-[200px] w-[180px] h-auto"
         // style={{ top: 0, left: 0 }}
       />
     </>

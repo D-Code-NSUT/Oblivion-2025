@@ -47,7 +47,7 @@ const JoinCommunity = () => {
               <img
                 src="/join-community-btn.png"
                 alt="join-community-btn"
-                className="mt-6 xs:hover:scale-105! hover:scale-110  transition xs:scale-100 scale-105"
+                className="mt-6 transition lg:scale-110 sm:scale-100 xs:scale-105 scale-120 xs:ml-0 ml-3 lg:hover:scale-115 sm:hover:scale-105 xs:hover:scale-110 hover:scale-125"
               />
             </Link>
           </div>
