@@ -1,22 +1,35 @@
-import { Suspense } from 'react';
+'use client';
+import { Suspense, useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
 import HomeClient from '@/components/home-client';
-import Loading from '@/components/loading/Loading';
-// import About from '@/components/home/About.section';
-// import TimeLine from '@/components/timeline/timeline';
-// import JoinCommunity from '@/components/join-community/join-community';
 
 
-// do not make changes to this file, it is used to render the home page
-// check out home-client.tsx for the actual home page component
+const Loading = dynamic(() => import('@/components/loading/Loading'), { ssr: false });
 
 export default function Home() {
-  return (<>
-    <Suspense fallback={<Loading />}>
-      <HomeClient />
-    </Suspense>
-    {/* <About/>
-    <TimeLine />
-    <JoinCommunity /> */}
+  const [isAppLoaded, setIsAppLoaded] = useState(false);
+
+  useEffect(() => {
+  
+    const timer = setTimeout(() => {
+      setIsAppLoaded(true);
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <>
+      {!isAppLoaded && (
+  // @ts-ignore
+  <Loading isAppLoaded={isAppLoaded} />
+)}
+
+      {isAppLoaded && (
+        <Suspense fallback={null}>
+          <HomeClient />
+        </Suspense>
+      )}
     </>
   );
 }
