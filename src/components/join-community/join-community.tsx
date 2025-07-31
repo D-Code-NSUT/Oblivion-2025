@@ -14,7 +14,7 @@ const JoinCommunity = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 2 }}
           viewport={{ once: true }}
-          className="uppercase font-pirata lg:text-[120px] xs:text-[100px] text-[70px] text-[#36B9C5] text-center pt-14"
+          className="uppercase font-pirata lg:text-[120px] xs:text-[100px] text-[60px] text-[#36B9C5] text-center pt-14"
         >
           JOIN THE COMMUNITY
         </motion.h1>

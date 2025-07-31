@@ -27,7 +27,7 @@ const TimeLine = () => {
             }}
             transition={{ duration: 2 }}
             viewport={{ once: true }}
-            className="uppercase font-pirata lg:text-[120px] xs:text-[100px] text-[70px] text-[#36B9C5] text-center mt-20"
+            className="uppercase font-pirata lg:text-[120px] xs:text-[100px] text-[60px] text-[#36B9C5] text-center mt-20"
           >
             TIMELINE
           </motion.div>
