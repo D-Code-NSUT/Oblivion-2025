@@ -55,46 +55,11 @@ export const sponsorsData = {
   ],
 
   third: [
-    
+   
   ],
 
   last: [
-    {
-      name: "Github",
-      image: "/oblivion.png",
-      link: "https://github.com",
-      custom: "",
-    },
-    {
-      name: "Adobe",
-      image: "/oblivion.png",
-      link: "https://adobe.com",
-      custom: "",
-    },
-    {
-      name: "Dropbox",
-      image: "/oblivion.png",
-      link: "https://dropbox.com",
-      custom: "",
-    },
-    {
-      name: "Zapier",
-      image: "/oblivion.png",
-      link: "https://zapier.com",
-      custom: "",
-    },
-    {
-      name: "Intercom",
-      image: "/oblivion.png",
-      link: "https://intercom.com",
-      custom: "",
-    },
-    {
-      name: "Freshworks",
-      image: "/oblivion.png",
-      link: "https://freshworks.com",
-      custom: "",
-    },
+    
   ],
 };
 

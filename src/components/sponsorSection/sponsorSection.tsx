@@ -13,7 +13,7 @@ function sponorCard(sponsorData:SponsorData,index:number,priority:number){
         <div className={`bg-cyan-900/30 pb-2 transiton drop-shadow-[0_0_15px_rgba(34,211,238,0.5)] hover:drop-shadow-[0_0_15px_rgba(34,211,238,1)] duration-300 flex flex-col h-full relative justify-between ${
             priority==1?'w-[30vw] md:w-[25vw] lg:w-[25vw] ':
             priority==2?'w-[23vw] md:w-[20vw] lg:w-[20vw]':
-            priority==3?'min-w-[15vw] md:min-w-[15vw] lg:min-w-[15vw] px-3 pb-3 pt-5':'min-w-[80%] max-w-[90%] md:px-2 lg:px-3 pb-3 pt-5'} overflow-hidden  mx-auto rounded-3xl border-cyan-700 border-3 items-center`}>    
+            priority==3?'min-w-[15vw] md:min-w-[15vw] max-w-[85%] lg:min-w-[15vw]  pb-3 pt-5':'min-w-[80%] max-w-[85%] md:px-2 lg:px-3 pb-3 pt-5'} overflow-hidden  mx-auto rounded-3xl border-cyan-700 border-3 items-center`}>    
             
             <Image
                 src="/sponsiBcg.png"
@@ -36,7 +36,7 @@ function sponorCard(sponsorData:SponsorData,index:number,priority:number){
 function SponsorSection() {
   
     return (
-        <div className={`h-full w-full pb-15 pt-50 bg-repeat-y lg:bg-[length:100%_auto]`}>
+        <div className={`h-full w-full pt-5 bg-repeat-y lg:bg-[length:100%_auto]`}>
             <Image 
                 src="/homeSponsiBcg.png"
                 alt="Hero Background"
@@ -66,36 +66,36 @@ function SponsorSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 2 }}
             viewport={{ once: true }}>
-            <div className='flex py-10 flex-wrap-reverse px-5  items-stretch  justify-center content-around'>
+            {sponsorsData.top[0] && <div className='flex sm:py-2 lg:py-5 flex-wrap-reverse px-5  items-stretch  justify-center content-around'>
                 {sponsorsData.top.map((sponsorData,index)=>sponorCard(sponsorData,index,1))}
-            </div>
+            </div>}
             </motion.div>
             <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 2 }}
             viewport={{ once: true }}>
-            <div className='flex py-5 flex-wrap-reverse px-7   items-stretch  justify-center content-around'>
+            {sponsorsData.second[0] && <div className='flex sm:py-2 lg:py-5 flex-wrap-reverse px-7   items-stretch  justify-center content-around'>
                 {sponsorsData.second.map((sponsorData,index)=>sponorCard(sponsorData,index,2))}
-            </div>
+            </div>}
             </motion.div>
              <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 2 }}
             viewport={{ once: true }}>
-            <div className='flex py-5 flex-wrap-reverse  gap-5 lg:gap-5 items-stretch  justify-center content-around'>
+            {sponsorsData.third[0] && <div className='flex sm:py-2 lg:py-5 px-1 flex-wrap-reverse  lg:gap-5 items-stretch  justify-center content-around'>
                 {sponsorsData.third.map((sponsorData,index)=>sponorCard(sponsorData,index,3))}
-            </div>
+            </div>}
             </motion.div>
             <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 2 }}
             viewport={{ once: true }}>
-            <div className='flex items-stretch flex-wrap-reverse  lg:gap-5  justify-center content-around'>
+            {sponsorsData.last[0] && <div className='flex sm:py-2 lg:py-5 items-stretch flex-wrap-reverse  lg:gap-5  justify-center content-around'>
                 {sponsorsData.last.map((sponsorData,index)=>sponorCard(sponsorData,index,4))}
-            </div>
+            </div>}
             </motion.div>
         </div>
         
