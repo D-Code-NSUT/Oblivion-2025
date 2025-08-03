@@ -42,16 +42,13 @@ function About() {
             transition={{ duration: 2 }}
             viewport={{ once: true }}
         >
-        <Image
-            className="block relative mx-auto mb-10 mt-10 w-[60%] max-w-[550] transiton duration-300 hover:drop-shadow-[0_0_20px_rgba(34,211,238,0.5)] drop-shadow-[0_0_15px_rgba(0,0,0,0.8) h-auto"
-            src="/group-23.svg"
-            alt="pspss"
-            width={300}
-            height={61}
-            priority
+        <h1 
+            className="block relative mx-auto mb-10 mt-10 text-center text-6xl md:text-8xl lg:text-9xl font-pirata text-cyan-400 transition duration-300 hover:drop-shadow-[0_0_20px_rgba(34,211,238,0.5)] drop-shadow-[0_0_15px_rgba(0,0,0,0.8)]"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
-        />
+        >
+            OBLIVION
+        </h1>
         <div className='mx-auto lg:mt-20   border-cyan-400 border-2 rounded-2xl backdrop-blur-md bg-white/3 
         text-center 
         text-l sm:text-l md:text-xl lg:text-3xl 
@@ -64,7 +61,7 @@ function About() {
         >
             {content}
         </div>
-    </motion.div>
+        </motion.div>
     </div>
   )
 }
