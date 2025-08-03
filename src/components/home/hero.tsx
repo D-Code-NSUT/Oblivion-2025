@@ -97,7 +97,7 @@ export default function Hero() {
             case 'mobile':
                 return 'translate(-50%, -50%) translateY(50px)';
             case 'tablet':
-                return 'translate(-50%, -50%) translateY(30px)';
+                return 'translate(-50%, -50%) translateY(50px)';
             case 'desktop':
             default:
                 return 'translate(-50%, -50%) translateY(50px)';
