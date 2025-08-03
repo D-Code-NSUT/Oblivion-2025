@@ -44,7 +44,7 @@ function WhyToStep() {
                     height: '150vh',
                 }} 
                 className={`min-h-screen flex justify-center  flex-col gap-4 ${styles.darkBackground} py-11 relative overflow-x-hidden`}>
-                <div className={`${styles['pirata-one-regular']} text-center text-[50px] md:text-[70px] lg:text-[100px] xl:text-[120px]`}>WHY TO STEP INTO OBLIVION</div>
+                <div className={`${styles['pirata-one-regular']} text-[#36B9C5] text-center text-[50px] md:text-[70px] lg:text-[100px] xl:text-[120px]`}>WHY TO STEP INTO OBLIVION</div>
                 <div
                     ref={elementRef}
                     className={`${isVisible ? styles.revealContainer : ""}`}>
