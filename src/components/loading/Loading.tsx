@@ -1,5 +1,7 @@
 "use client";
 
+import Image from 'next/image';
+
 import React, { useEffect, useState } from 'react';
 import styles from './Loading.module.css';
 
@@ -32,6 +34,31 @@ export default function Loading({ onComplete }: LoadingProps) {
 
   return (
     <div className="fixed inset-0 w-screen h-screen flex flex-col items-center justify-center bg-black z-[1000] overflow-hidden">
+      <Image 
+        src="/cloudsf.png"
+        alt="Hero Background"
+        fill
+        style={{
+          objectFit: 'cover',
+          objectPosition: 'center',
+          display: 'block',
+          zIndex: -3,
+          width: '100%',
+           height: '100%',
+           opacity: 0.8,
+        }}
+        quality={100}
+        priority
+      />
+      <div className="absolute z-5 inset-0 bg-[linear-gradient(to_bottom,_black_0%,_rgba(0,0,0,0.1)_30%,_rgba(0,0,0,0)_100%)]" />
+      <Image
+        className= {`absolute top-0 lg:-top-40   ${styles.smoothFade} ${styles.flickerFreq} opacity-10`}
+            src="/lightning.png"
+            alt="pspss"
+            width={1000}
+            height={0}
+            priority
+        />
       <div className="relative z-10 flex flex-col items-center justify-center">
         <img
           src="/sponsiBcg.png"
@@ -46,7 +73,7 @@ export default function Loading({ onComplete }: LoadingProps) {
           onContextMenu={(e) => e.preventDefault()}
           draggable={false}
         />
-
+        
         <div
           className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-cyan-400 select-none text-center px-4 ${
             animationStage === 'fadeIn' ? styles.fadeIn : ''
