@@ -7,7 +7,7 @@ export default function Hero() {
     const [y, setY] = useState(0);
     const [initialY, setInitialY] = useState<number | null>(null);
     const [isInitialized, setIsInitialized] = useState(false);
-    const [isCardHovered, setIsCardHovered] = useState(true); // Show button by default
+    const [isCardHovered, setIsCardHovered] = useState(false); // Start hidden for animation
     
     const heroRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
@@ -55,6 +55,15 @@ export default function Hero() {
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, [scrollYProgress]);
+
+    // Trigger button animation on mount
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsCardHovered(true);
+        }, 1000); // Show button after 1 second
+
+        return () => clearTimeout(timer);
+    }, []);
 
     const viewDetails = () => {
         const eventsSection = document.getElementById('events');
@@ -151,10 +160,11 @@ export default function Hero() {
                                 </div>
 
                                 {/* View Details Button - On top of everything */}
-                                <div className={`${isCardHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"} transition-all duration-500 ease-out absolute bottom-20 md:bottom-32 left-1/2 transform -translate-x-1/2`} style={{ zIndex: 9999, marginLeft: '-35px' }}>
-                                    <button
+                                <div className={`${isCardHovered ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-16 scale-90"} transition-all duration-1000 ease-[cubic-bezier(0.4,0,0.2,1)] delay-500 absolute bottom-32 md:bottom-32 left-1/2 transform -translate-x-1/2`} style={{ zIndex: 9999 }}>
+                                    <div className="ml-0 md:ml-[-35px]">
+                                        <button
                                         onClick={viewDetails}
-                                        className='relative bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-400 border-none p-0 cursor-pointer transition-all duration-300 w-[180px] md:w-[250px] h-[48px] md:h-[60px] overflow-hidden shadow-[0_0_15px_rgba(0,191,255,0.4)] hover:scale-105 hover:shadow-[0_0_25px_rgba(0,191,255,0.8)] active:scale-95'
+                                        className='relative bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-400 border-none p-0 cursor-pointer transition-all duration-300 ease-out w-[180px] md:w-[250px] h-[48px] md:h-[60px] overflow-hidden shadow-[0_0_15px_rgba(0,191,255,0.4)] hover:scale-105 hover:shadow-[0_0_25px_rgba(0,191,255,0.8)] active:scale-95 transform-gpu animate-pulse-subtle'
                                         style={{
                                             clipPath: 'polygon(12px 0%, calc(100% - 12px) 0%, 100% 50%, calc(100% - 12px) 100%, 12px 100%, 0% 50%)'
                                         }}
@@ -172,6 +182,7 @@ export default function Hero() {
                                             Register Now
                                         </span>
                                     </button>
+                                    </div>
                                 </div>
                                 
                             </>
