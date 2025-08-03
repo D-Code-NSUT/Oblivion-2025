@@ -7,6 +7,7 @@ export default function Hero() {
     const [y, setY] = useState(0);
     const [initialY, setInitialY] = useState<number | null>(null);
     const [isInitialized, setIsInitialized] = useState(false);
+    const [isCardHovered, setIsCardHovered] = useState(true); // Show button by default
     
     const heroRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
@@ -55,6 +56,16 @@ export default function Hero() {
         return () => window.removeEventListener('resize', handleResize);
     }, [scrollYProgress]);
 
+    const viewDetails = () => {
+        const eventsSection = document.getElementById('events');
+        if (eventsSection) {
+            eventsSection.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    };
+
 
     return (
         <motion.div>
@@ -94,7 +105,7 @@ export default function Hero() {
                                     zIndex: 1,
                                 }}>
                                     <Image
-                                        src="/group-21.png"
+                                        src="/group-21.svg"
                                         alt={`Title text`}
                                         fill
                                         style={{
@@ -137,6 +148,30 @@ export default function Hero() {
                                         }}
                                         quality={100}
                                     />
+                                </div>
+
+                                {/* View Details Button - On top of everything */}
+                                <div className={`${isCardHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"} transition-all duration-500 ease-out absolute bottom-20 md:bottom-32 left-1/2 transform -translate-x-1/2`} style={{ zIndex: 9999, marginLeft: '-35px' }}>
+                                    <button
+                                        onClick={viewDetails}
+                                        className='relative bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-400 border-none p-0 cursor-pointer transition-all duration-300 w-[180px] md:w-[250px] h-[48px] md:h-[60px] overflow-hidden shadow-[0_0_15px_rgba(0,191,255,0.4)] hover:scale-105 hover:shadow-[0_0_25px_rgba(0,191,255,0.8)] active:scale-95'
+                                        style={{
+                                            clipPath: 'polygon(12px 0%, calc(100% - 12px) 0%, 100% 50%, calc(100% - 12px) 100%, 12px 100%, 0% 50%)'
+                                        }}
+                                    >
+                                        {/* Inner black background */}
+                                        <div
+                                            className='absolute top-[3px] md:top-[4px] left-[8px] md:left-[10px] right-[8px] md:right-[10px] bottom-[3px] md:bottom-[4px] bg-black z-10'
+                                            style={{
+                                                clipPath: 'polygon(8px 0%, calc(100% - 8px) 0%, 100% 50%, calc(100% - 8px) 100%, 8px 100%, 0% 50%)'
+                                            }}
+                                        ></div>
+
+                                        {/* Button text */}
+                                        <span className='relative z-20 text-white text-[14px] md:text-[18px] font-semibold uppercase tracking-wider flex items-center justify-center h-full font-sans shadow-[0_0_8px_rgba(0,191,255,0.6)]'>
+                                            Register Now
+                                        </span>
+                                    </button>
                                 </div>
                                 
                             </>

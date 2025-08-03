@@ -40,7 +40,8 @@ function WhyToStep() {
                     backgroundImage: `url("/why_to_step_into_oblivion-ship-bg.png")`,
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
-                    backgroundPosition: 'center'
+                    backgroundPosition: 'center',
+                    height: '150vh',
                 }} 
                 className={`min-h-screen flex justify-center  flex-col gap-4 ${styles.darkBackground} py-11 relative overflow-x-hidden`}>
                 <div className={`${styles['pirata-one-regular']} text-center text-[50px] md:text-[70px] lg:text-[100px] xl:text-[120px]`}>WHY TO STEP INTO OBLIVION</div>

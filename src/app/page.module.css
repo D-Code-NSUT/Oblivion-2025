@@ -93,7 +93,7 @@
   align-items: center;
   text-align: center;
   z-index: 10;
-  background: black;
+  background: rgb(0, 0, 0);
   position: relative;
 }
 
