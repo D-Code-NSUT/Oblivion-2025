@@ -203,7 +203,7 @@ export default function Hero() {
                                     <div className="ml-0 md:ml-[-35px]">
                                         <button
                                         onClick={viewDetails}
-                                        className='relative bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-400 border-none p-0 cursor-pointer transition-all duration-300 ease-out w-[180px] md:w-[250px] h-[48px] md:h-[60px] overflow-hidden shadow-[0_0_15px_rgba(0,191,255,0.4)] hover:scale-105 hover:shadow-[0_0_25px_rgba(0,191,255,0.8)] active:scale-95 transform-gpu animate-pulse-subtle'
+                                        className='relative bg-gradient-to-r from-cyan-300 via-[#0674da] to-cyan-300 border-none p-0 cursor-pointer transition-all duration-300 ease-out w-[180px] md:w-[250px] h-[48px] md:h-[60px] overflow-hidden shadow-[0_0_15px_rgba(0,191,255,0.4)] hover:scale-105 hover:shadow-[0_0_25px_rgba(0,191,255,0.8)] active:scale-95 transform-gpu animate-pulse-subtle'
                                         style={{
                                             clipPath: 'polygon(12px 0%, calc(100% - 12px) 0%, 100% 50%, calc(100% - 12px) 100%, 12px 100%, 0% 50%)'
                                         }}
