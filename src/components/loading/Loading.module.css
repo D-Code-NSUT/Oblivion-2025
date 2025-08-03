@@ -56,7 +56,45 @@
     opacity: 0;
   }
 }
+@keyframes flicker {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 0.3;
+    }
 
+    18%{
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.4;
+    }
+    40% {
+        opacity: 0.1;
+    }
+    45%{
+        opacity: 0;
+    }
+    73% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 0.3;
+    }
+    93% {
+        opacity: 0;
+    }
+    95%{
+        opacity:0.2;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+.flickerFreq {
+    animation: flicker 10s infinite;
+}
 
 .rotateAndGrow {
   animation: rotateAndGrow 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
