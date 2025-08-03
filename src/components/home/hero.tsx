@@ -8,6 +8,7 @@ export default function Hero() {
     const [initialY, setInitialY] = useState<number | null>(null);
     const [isInitialized, setIsInitialized] = useState(false);
     const [isCardHovered, setIsCardHovered] = useState(false); // Start hidden for animation
+    const [screenSize, setScreenSize] = useState('desktop');
     
     const heroRef = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
@@ -50,7 +51,20 @@ export default function Hero() {
             const currentProgress = scrollYProgress.get();
             const calculatedY = currentProgress * 100;
             console.log('Resize recalculation - Y:', calculatedY, 'shouldShowVideo:', calculatedY <= 33.34);
+            
+            // Update screen size for responsive positioning
+            const width = window.innerWidth;
+            if (width >= 1024) {
+                setScreenSize('desktop');
+            } else if (width >= 768) {
+                setScreenSize('tablet');
+            } else {
+                setScreenSize('mobile');
+            }
         };
+
+        // Set initial screen size
+        handleResize();
 
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
@@ -64,6 +78,31 @@ export default function Hero() {
 
         return () => clearTimeout(timer);
     }, []);
+
+    const getHeroTextTransform = () => {
+        switch (screenSize) {
+            case 'mobile':
+                return 'translate(-50%, -50%) translateY(-100px)';
+            case 'tablet':
+                return 'translate(-50%, -50%) translateY(-100px)';
+            case 'desktop':
+            default:
+                return 'translate(-50%, -50%) translateY(-150px)';
+        }
+        
+    };
+
+    const getThemeTextTransform = () => {
+        switch (screenSize) {
+            case 'mobile':
+                return 'translate(-50%, -50%) translateY(50px)';
+            case 'tablet':
+                return 'translate(-50%, -50%) translateY(30px)';
+            case 'desktop':
+            default:
+                return 'translate(-50%, -50%) translateY(50px)';
+        }
+    };
 
     const viewDetails = () => {
         const eventsSection = document.getElementById('events');
@@ -110,7 +149,7 @@ export default function Hero() {
                                     position: 'absolute',
                                     top: '50%',
                                     left: '50%',
-                                    transform: 'translate(-50%, -50%) translateY(-150px)',
+                                    transform: getHeroTextTransform(),
                                     zIndex: 1,
                                 }}>
                                     <Image
@@ -130,7 +169,7 @@ export default function Hero() {
                                     position: 'absolute',
                                     top: '50%',
                                     left: '50%',
-                                    transform: 'translate(-50%, -50%) translateY(50px)',
+                                    transform: getThemeTextTransform(),
                                     zIndex: 1,
                                 }}>
                                     <Image
