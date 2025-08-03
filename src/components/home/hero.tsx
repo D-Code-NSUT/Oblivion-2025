@@ -125,7 +125,7 @@ export default function Hero() {
                                     zIndex: 1,
                                 }}>
                                     <Image
-                                        src="/group-25.png"
+                                        src="/group-25.svg"
                                         alt={`Title text`}
                                         fill
                                         style={{
