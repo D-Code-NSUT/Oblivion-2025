@@ -202,7 +202,7 @@ export default function Hero() {
                                 <div className={`${isCardHovered ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-16 scale-90"} transition-all duration-1000 ease-[cubic-bezier(0.4,0,0.2,1)] delay-500 absolute bottom-32 md:bottom-32 left-1/2 transform -translate-x-1/2`} style={{ zIndex: 9999 }}>
                                     <button
                                         onClick={viewDetails}
-                                        className='relative bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-400 border-none p-0 cursor-pointer transition-all duration-300 ease-out w-[180px] md:w-[250px] h-[48px] md:h-[60px] overflow-hidden shadow-[0_0_15px_rgba(0,191,255,0.4)] hover:scale-105 hover:shadow-[0_0_25px_rgba(0,191,255,0.8)] active:scale-95 transform-gpu animate-pulse-subtle'
+                                        className='relative bg-gradient-to-r from-cyan-300 via-[#0674da] to-cyan-300 border-none p-0 cursor-pointer transition-all duration-300 ease-out w-[180px] md:w-[250px] h-[48px] md:h-[60px] overflow-hidden shadow-[0_0_15px_rgba(0,191,255,0.4)] hover:scale-105 hover:shadow-[0_0_25px_rgba(0,191,255,0.8)] active:scale-95 transform-gpu animate-pulse-subtle'
                                         style={{
                                             clipPath: 'polygon(12px 0%, calc(100% - 12px) 0%, 100% 50%, calc(100% - 12px) 100%, 12px 100%, 0% 50%)'
                                         }}
