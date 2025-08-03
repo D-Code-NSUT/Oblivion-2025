@@ -163,7 +163,10 @@ export default function HomeClient() {
       </section>
 
       <section id="events" className={`${styles.section}`} style={{
-        background: 'radial-gradient(ellipse at 35% bottom, rgba(14, 145, 157, 0.8) 0%, rgba(0, 0, 0, 1) 70%)'
+        backgroundImage: 'url(/event-background.svg)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
       }}>
         <div>
           <Events />
