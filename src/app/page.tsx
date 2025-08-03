@@ -13,7 +13,7 @@ export default function Home() {
   
     const timer = setTimeout(() => {
       setIsAppLoaded(true);
-    }, 5000);
+    }, 3500);
 
     return () => clearTimeout(timer);
   }, []);
@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <>
       {!isAppLoaded && (
-  // @ts-ignore
+  // @ts-expect-error Loading component type mismatch with isAppLoaded prop
   <Loading isAppLoaded={isAppLoaded} />
 )}
 
