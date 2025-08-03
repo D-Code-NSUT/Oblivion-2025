@@ -168,7 +168,7 @@ export default function Nav() {
                             objectPosition: 'center',
                         }} src={"/oblivion.png"} alt='Olivion Icon'  fill />
                     </div>
-                    <Link href="/">Olivion</Link>
+                    <Link href="/" className='border-none'>Oblivion</Link>
                 </div>
                 <div className={styles.navLinks}>
                     <NavLink href="/" isActive={isNavLinkActive('/')}>Home</NavLink>
