@@ -8,7 +8,7 @@ import { motion } from "motion/react";
 const JoinCommunity = () => {
   return (
     <>
-      <div className="relative w-full bg-black min-h-screen md:pb-40 lg:pb-48">
+      <div className="relative w-[99vw] bg-black min-h-screen md:pb-40 lg:pb-48">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
