@@ -27,7 +27,7 @@ const items = [
 const FAQs = () => {
   return (
     <>
-      <div className="min-h-[70vh]  md:w-[750px] w-[90vw]">
+      <div className="min-h-[70vh]  lg:w-[950px] w-[90vw]">
         <h1
           className={`font-pirata lg:text-[120px] xs:text-[100px] text-[60px] text-[#36B9C5] text-center mt-5`}
         >
