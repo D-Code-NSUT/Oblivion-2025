@@ -12,6 +12,7 @@
 }
 
 .socialButton {
+    margin-top: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,6 +94,7 @@
     }
 
     .socialButton {
+        margin-top: 28px;
         width: 60px;
         height: 60px;
         border-radius: 16px;
