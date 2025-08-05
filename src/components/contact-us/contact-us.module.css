@@ -101,3 +101,9 @@
         box-shadow: 1px 1px 8px rgba(177,242,255,0.9);
     }
 }
+
+@media screen and (max-width: 800px) {
+    .topBorderContainer{
+        margin-top: 120px;
+    }
+}

@@ -34,7 +34,7 @@ export default function ContactUs() {
                     marginTop: '50px',
                 }}
             >
-                <div className={styles.contactBorderContainer}>
+                <div className={`${styles.contactBorderContainer} ${styles.topBorderContainer}`}>
                     <Image
                         src="/image-31.png"
                         alt='Contact Us Top Border'
