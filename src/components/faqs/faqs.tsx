@@ -22,12 +22,22 @@ const items = [
     header: "Why do we use it?",
     content: "Suspendisse massa risus, pretium id interdum in...",
   },
+  {
+    id: "item-4",
+    header: "Where does it come from?",
+    content: "Quisque eget luctus mi, vehicula mollis lorem...",
+  },
+  {
+    id: "item-5",
+    header: "Why do we use it?",
+    content: "Suspendisse massa risus, pretium id interdum in...",
+  },
 ];
 
 const FAQs = () => {
   return (
     <>
-      <div className="min-h-[70vh]  lg:w-[950px] w-[90vw]">
+      <div className="min-h-[100vh]  lg:w-[80vw] w-[90vw]">
         <h1
           className={`font-pirata lg:text-[120px] xs:text-[100px] text-[60px] text-[#36B9C5] text-center mt-5`}
         >

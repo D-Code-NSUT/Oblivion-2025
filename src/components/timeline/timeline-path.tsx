@@ -1,16 +1,17 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useMemo, useRef } from "react";
 import { gsap } from "gsap";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Image from "next/image";
 
 gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
 
 const TimelinePath = () => {
   const shipRef = useRef(null);
   const [endPercentage, setEndPercentage] = React.useState(0.2);
-  const day1 = new Date("2025-08-29");
-  const day2 = new Date("2025-08-30");
-  const day3 = new Date("2025-08-31");
+  const day1 = useMemo(() => new Date("2025-08-29"), []);
+  const day2 = useMemo(() => new Date("2025-08-30"), []);
+  const day3 = useMemo(() => new Date("2025-08-31"), []);
 
   useEffect(() => {
     const date = new Date();
@@ -481,12 +482,14 @@ const TimelinePath = () => {
         </defs>
       </svg>
 
-      <img
-        src="/ship-icon.png"
-        ref={shipRef}
+      <Image
+        src="/ship-icon-2.webp"
         alt="Ship Icon"
+        width={240}
+        height={0}
+        sizes="(min-width: 768px) 240px, (min-width: 480px) 200px, 180px"
         className="absolute md:w-[240px] xs:w-[200px] w-[180px] h-auto"
-        // style={{ top: 0, left: 0 }}
+        ref={shipRef}
       />
     </>
   );

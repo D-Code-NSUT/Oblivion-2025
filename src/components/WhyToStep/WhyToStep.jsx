@@ -35,10 +35,10 @@ function WhyToStep() {
     return (
         <>
 
-            <div id='WhyToStep'
-                style={{
+            <div id='WhyToStep' 
+                style={{ 
                     backgroundImage: `url("/why_to_step_into_oblivion-ship-bg.png")`,
-                    backgroundSize: 'contain',
+                    backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
                     backgroundPosition: 'center',
                     

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useRef, useState, useEffect } from 'react'
 import { createPortal } from 'react-dom'
+import Image from 'next/image'
 
 
 function EventDetailsPopup({
@@ -121,16 +122,8 @@ function EventDetailsPopup({
         {/* Main content container */}
         <div className='flex flex-col md:flex-row gap-1 md:gap-6 w-full md:h-full md:max-h-[calc(85vh-6rem)]'>
           {/* Left side - Image */}
-          <div className='flex-shrink-0 w-full md:w-2/5 lg:w-1/2 flex items-center justify-center relative pt-12 md:pt-0 md:self-start md:sticky md:top-0'>
-            <Image 
-              className='rounded-lg w-full md:w-auto md:h-[500px] lg:h-[550px] object-cover aspect-[3/4] max-w-[320px] md:max-w-none mx-auto' 
-              src={poster} 
-              alt={name || "Event poster"}
-              width={320}
-              height={427}
-              style={{ objectFit: 'cover' }}
-              priority
-            />
+          <div className='flex-shrink-0 md:w-1/2'>
+            <img className='rounded-lg w-full h-[200px] md:h-[430px] object-contain bg-gray-900' src={poster} alt={name || "Event poster"} />
           </div>
 
           {/* Right side - Details */}
@@ -143,8 +136,8 @@ function EventDetailsPopup({
             <h1 className=' font-semibold font-pirata tracking-wider mt-1 text-center text-[#36B9C5] text-[45px] md:text-[70px]'>{name}</h1>
 
             {/* Date */}
-            <div className='flex items-center gap-4 text-white'>
-              <Image src="/Calender.svg" alt="" className='w-[67px] h-[67px]' width={67} height={67} />
+            <div className='flex items-center gap-3 md:gap-4 text-white'>
+              <img src="/Calender.svg" alt="" className='w-[67px] h-[67px]' />
               <div>
 
                 <div className='text-xl font-semibold'>{date}</div>
@@ -154,7 +147,7 @@ function EventDetailsPopup({
             {/* Venue */}
             <div className='flex items-center gap-4 text-white'>
 
-              <Image src="/Location.svg" alt="" className='w-[67px] h-[67px]' width={67} height={67} />
+              <img src="/Location.svg" alt="" className='w-[67px] h-[67px]' />
 
               <div className='flex-1'>
                 <div className='text-xl font-semibold'>{venue}</div>
@@ -164,7 +157,7 @@ function EventDetailsPopup({
             {/* Description */}
             <div className='flex items-start  gap-4 text-white'>
 
-              <Image src="/Description.svg" alt="" className='w-[67px] h-[67px]' width={67} height={67} />
+              <img src="/Description.svg" alt="" className='w-[67px] h-[67px]' />
 
               <div className='flex-1'>
                 <div className='text-lg leading-relaxed text-gray-200 font-bold'>{description}</div>
