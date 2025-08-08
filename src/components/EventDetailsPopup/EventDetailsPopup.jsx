@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { useRef, useState, useEffect } from 'react'
 import { createPortal } from 'react-dom'
+import Image from 'next/image'
 
 
 function EventDetailsPopup({
@@ -134,7 +135,7 @@ function EventDetailsPopup({
 
             {/* Date */}
             <div className='flex items-center gap-3 md:gap-4 text-white'>
-              <img src="/Calender.svg" alt="" className='w-[67px] h-[67px]' />
+              <Image src="/Calender.svg" alt="calender-icon" width={67} height={67} className='w-[67px] h-[67px]' />
               <div>
 
                 <div className='text-lg md:text-xl font-semibold'>{date}</div>
@@ -144,7 +145,7 @@ function EventDetailsPopup({
             {/* Venue */}
             <div className='flex items-center gap-3 md:gap-4 text-white'>
 
-              <img src="/Location.svg" alt="" className='w-[67px] h-[67px]' />
+              <Image src="/Location.svg" alt="location-icon" width={67} height={67} className='w-[67px] h-[67px]' />
 
               <div className='flex-1'>
                 <div className='text-lg md:text-xl font-semibold'>{venue}</div>
@@ -154,7 +155,7 @@ function EventDetailsPopup({
             {/* Description */}
             <div className='flex items-center  gap-3 md:gap-4 text-white'>
 
-              <img src="/Description.svg" alt="" className='w-[67px] h-[67px]' />
+              <Image src="/Description.svg" alt="description-icon" width={67} height={67} className='w-[67px] h-[67px]' />
 
               <div className='flex-1'>
                 <div className='text-base md:text-lg leading-relaxed text-gray-200 font-bold'>{description}</div>

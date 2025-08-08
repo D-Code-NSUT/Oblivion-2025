@@ -8,7 +8,7 @@ const TimeLine = () => {
     <div className="timeline-wrapper">
       <div className="relative w-full bg-black xs:h-[980px] h-[800px]">
         <Image
-          src="/pirate-image-timeline.png"
+          src="/pirate-image-timeline.webp"
           alt="Timeline Pirate"
           width={500}
           height={500}

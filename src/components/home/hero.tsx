@@ -129,7 +129,7 @@ export default function Hero() {
                             <>
                                 {/* Background image */}
                                 <Image 
-                                    src="/desktop-6.png"
+                                    src="/desktop-6.webp"
                                     alt="Hero Background"
                                     fill
                                     style={{
@@ -187,7 +187,7 @@ export default function Hero() {
                                 {/* Centered pirate image */}
                                 <div className={styles.pirateImage}>
                                     <Image 
-                                        src="/pirate.png"
+                                        src="/pirate.webp"
                                         alt="Hero"
                                         fill
                                         style={{
