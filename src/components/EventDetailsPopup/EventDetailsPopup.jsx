@@ -126,7 +126,15 @@ function EventDetailsPopup({
         <div className='flex flex-col md:flex-row gap-4 md:gap-6 w-full '>
           {/* Left side - Image */}
           <div className='flex-shrink-0 md:w-1/2'>
-            <img className='rounded-lg w-full h-[200px] md:h-[430px] object-contain bg-gray-900' src={poster} alt={name || "Event poster"} />
+            {/* <img className='rounded-lg w-full h-[200px] md:h-[430px] object-contain bg-gray-900' src={poster} alt={name || "Event poster"} /> */}
+            <Image
+              src={poster}
+              alt={name || "Event poster"}
+              width={800}
+              height={430}
+              sizes="(min-width: 768px) 100vw, 100vw"
+              className="rounded-lg w-full h-[200px] md:h-[430px] object-contain bg-gray-900"
+            />
           </div>
 
           {/* Right side - Details */}

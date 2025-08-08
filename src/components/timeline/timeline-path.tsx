@@ -482,11 +482,14 @@ const TimelinePath = () => {
         </defs>
       </svg>
 
-      <img
+      <Image
         src="/ship-icon-2.webp"
-        ref={shipRef}
         alt="Ship Icon"
+        width={240}
+        height={0}
+        sizes="(min-width: 768px) 240px, (min-width: 480px) 200px, 180px"
         className="absolute md:w-[240px] xs:w-[200px] w-[180px] h-auto"
+        ref={shipRef}
       />
     </>
   );
