@@ -3,7 +3,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useRef, useState, useEffect } from 'react'
 import { createPortal } from 'react-dom'
-import Image from 'next/image'
 
 
 function EventDetailsPopup({
