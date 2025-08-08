@@ -16,11 +16,11 @@ function sponorCard(sponsorData:SponsorData,index:number,priority:number){
             priority==3?'min-w-[15vw] md:min-w-[15vw] max-w-[85%] lg:min-w-[15vw]  pb-3 pt-5':'min-w-[80%] max-w-[85%] md:px-2 lg:px-3 pb-3 pt-5'} overflow-hidden  mx-auto rounded-3xl border-cyan-700 border-3 items-center`}>    
             
             <Image
-                src="/sponsiBcg.png"
+                src="/sponsiBcg.webp"
                 alt="Decorative background"
                 fill
                 className="opacity-50 object-contain"
-                quality={100}
+                quality={75}
             />
             
             { priority<3 && <div className={`text-sm ${styles['pirata-one-regular']}
@@ -38,7 +38,7 @@ function SponsorSection() {
     return (
         <div className={`h-full w-full pt-5 bg-repeat-y lg:bg-[length:100%_auto]`}>
             <Image 
-                src="/homeSponsiBcg.png"
+                src="/homeSponsiBcg.webp"
                 alt="Hero Background"
                 fill
                 style={{

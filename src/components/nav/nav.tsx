@@ -8,6 +8,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useScrollSpy } from '@/hooks/use-scroll-spy';
 import { usePathname } from 'next/navigation';
+import { cn } from '@/lib/utils';
 
 // Animation variants for the community links
 const communityLinksVariants = {
@@ -166,7 +167,7 @@ export default function Nav() {
                         <Image style={{
                             objectFit: 'contain',
                             objectPosition: 'center',
-                        }} src={"/oblivion.png"} alt='Olivion Icon'  fill />
+                        }} src={"/oblivion.webp"} alt='Olivion Icon'  fill />
                     </div>
                     <Link href="/" className='border-none font-pirata'>
                         <Image 
@@ -297,7 +298,7 @@ export default function Nav() {
                         }}
                     >
                     <motion.div 
-                        className={styles.linkList}
+                        className={cn(styles.linkList, "font-source")}
                         variants={mobileMenuVariants}
                         initial="hidden"
                         animate="visible"

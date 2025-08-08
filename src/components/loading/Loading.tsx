@@ -35,7 +35,7 @@ export default function Loading({ onComplete }: LoadingProps) {
   return (
     <div className="fixed inset-0 w-screen h-screen flex flex-col items-center justify-center bg-black z-[1000] overflow-hidden">
       <Image 
-        src="/cloudsf.png"
+        src="/cloudsf.webp"
         alt="Hero Background"
         fill
         style={{
@@ -53,16 +53,19 @@ export default function Loading({ onComplete }: LoadingProps) {
       <div className="absolute z-5 inset-0 bg-[linear-gradient(to_bottom,_black_0%,_rgba(0,0,0,0.1)_30%,_rgba(0,0,0,0)_100%)]" />
       <Image
         className= {`absolute top-0 lg:-top-40   ${styles.smoothFade} ${styles.flickerFreq} opacity-10`}
-            src="/lightning.png"
+            src="/lightning.webp"
             alt="pspss"
             width={1000}
             height={0}
             priority
         />
       <div className="relative z-10 flex flex-col items-center justify-center">
-        <img
-          src="/sponsiBcg.png"
+        <Image
+          src="/sponsiBcg.webp"
           alt="Rotating Helm"
+          width={200}
+          height={200}
+          sizes="(min-width: 1024px) 200px, (min-width: 768px) 192px, (min-width: 640px) 160px, 128px"
           className={`w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-50 lg:h-50 mb-4 select-none pointer-events-none ${
             animationStage === 'fadeIn' ? styles.rotateAndGrow : ''
           } ${

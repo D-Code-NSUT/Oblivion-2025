@@ -76,7 +76,7 @@ export default function HomeClient() {
             variants={arrowVariants}
           >
             <Image
-              src="/rectangle-83.png"
+              src="/rectangle-83.webp"
               alt="Down Arrow"
               fill
               style={{
@@ -93,7 +93,7 @@ export default function HomeClient() {
             variants={arrowVariants}
           >
             <Image
-              src="/polygon-4.png"
+              src="/polygon-4.webp"
               alt="Down Arrow"
               fill
               style={{
@@ -110,7 +110,7 @@ export default function HomeClient() {
             variants={arrowVariants}
           >
             <Image
-              src="/polygon-3.png"
+              src="/polygon-3.webp"
               alt="Down Arrow"
               fill
               style={{
@@ -127,7 +127,7 @@ export default function HomeClient() {
             variants={arrowVariants}
           >
             <Image
-              src="/polygon-5.png"
+              src="/polygon-5.webp"
               alt="Down Arrow"
               fill
               style={{
@@ -144,7 +144,7 @@ export default function HomeClient() {
             variants={arrowVariants}
           >
             <Image
-              src="/polygon-6.png"
+              src="/polygon-6.webp"
               alt="Down Arrow"
               fill
               style={{

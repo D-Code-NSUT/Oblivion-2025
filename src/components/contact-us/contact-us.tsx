@@ -8,7 +8,7 @@ export default function ContactUs() {
             {/* Background image with lower z-index */}
             <div style={{position: 'absolute', inset: 0, zIndex: 0}}>
                 <Image
-                    src="/contact-us.png"
+                    src="/contact-us.webp"
                     alt='Contact Us Background'
                     fill
                     style={{
@@ -36,7 +36,7 @@ export default function ContactUs() {
             >
                 <div className={`${styles.contactBorderContainer} ${styles.topBorderContainer}`}>
                     <Image
-                        src="/image-31.png"
+                        src="/image-31.webp"
                         alt='Contact Us Top Border'
                         fill
                         className={styles.contactBorder}
@@ -45,7 +45,7 @@ export default function ContactUs() {
                 </div>
                 <div className={styles.contactHeadingText}>
                     <Image
-                        src="/contact-us-heading.png"
+                        src="/contact-us-heading.webp"
                         alt='Contact Us Heading'
                         fill
                         className={styles.contactHeadingImage}
@@ -54,7 +54,7 @@ export default function ContactUs() {
                 </div>
                 <div className={styles.contactBorderContainer}>
                     <Image
-                        src="/image-31.png"
+                        src="/image-31.webp"
                         alt='Contact Us Bottom Border'
                         fill
                         className={styles.contactBorder}

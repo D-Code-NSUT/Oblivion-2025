@@ -20,7 +20,7 @@ function About() {
     <div className={`pt-35 w-full mt-80 flex flex-col items-center overflow-hidden justify-center relative ${styles.aboutSection}`}>
         <Image
         className= {`absolute top-10 -left-40 opacity`}
-            src="/abg.png"
+            src="/abg.webp"
             alt="pspss"
             width={700}
             height={0}
@@ -28,7 +28,7 @@ function About() {
         />
         <Image
         className= {`absolute top-2 lg:-top-40 left-10vw ${styles.smoothFade} ${hovered?styles.flickerFreq:styles.flicker} opacity-70`}
-            src="/lightning.png"
+            src="/lightning.webp"
             alt="pspss"
             width={1500}
             height={0}
