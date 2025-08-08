@@ -3,6 +3,7 @@ import styles from './EventCard.module.css'
 import { useState } from 'react'
 import useEventDetails from '@/hooks/useEventDetails';
 import EventDetailsPopup from '../EventDetailsPopup/EventDetailsPopup';
+import ComingSoonPopUp from '../ComingSoonPopUp/ComingSoonPopUp';
 
 function EventCard({
     name
@@ -56,8 +57,13 @@ function EventCard({
                 </div>
             </div>
 
-            {
-                showPopup && (
+            {showPopup && (
+                eventDetail.state ? (
+                    <ComingSoonPopUp 
+                        name={eventDetail.name}
+                        closePopUpFunction={closePopup}
+                    />
+                ) : (
                     <EventDetailsPopup
                         name={eventDetail.name}
                         date={eventDetail.date}
@@ -65,10 +71,10 @@ function EventCard({
                         venue={eventDetail.venue}
                         RegistrationLink={eventDetail.RegistrationLink}
                         poster={eventDetail.poster}
-                        closePopUpFunction = {closePopup}
+                        closePopUpFunction={closePopup}
                     />
                 )
-            }
+            )}
         </>
     )
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { useRef, useState, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 
@@ -90,10 +91,6 @@ function EventDetailsPopup({
       
     >
 
-      <div className='w-full h-[20vh] bg-gradient-to-r from'>
-
-      </div>
-
       <div
         ref={popupRef}
         onWheel={(e) => e.stopPropagation()}
@@ -104,13 +101,13 @@ function EventDetailsPopup({
           scrollbarWidth: 'auto',
           scrollbarColor: '#4B5563 #1F2937',
         }}
-        className={`bg-black absolute top-[17%] mx-auto flex flex-col p-8 rounded-3xl gap-3 md:gap-4 max-h-[85vh] md:max-h-[80vh] w-full max-w-sm md:max-w-4xl  overflow-y-auto scroll-smooth transition-opacity duration-200 ease-out ${isVisible ? 'opacity-100' : 'opacity-0'
+        className={` bg-black fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:absolute md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 flex flex-col p-4 md:p-8 rounded-3xl gap-2 md:gap-4 max-h-[90vh] md:h-[85vh] w-[95%] md:w-full max-w-sm md:max-w-4xl overflow-y-auto md:overflow-hidden scroll-smooth transition-opacity duration-200 ease-out ${isVisible ? 'opacity-100' : 'opacity-0'
           } [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-gray-800 [&::-webkit-scrollbar-thumb]:bg-gray-600 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb:hover]:bg-gray-500 border-2 border-[#5CE4FF] z-[999999]`}
       >
-        {/* Close button */}
+        {/* Close button - works for both mobile and desktop */}
         <button
           onClick={closePopUp}
-          className="absolute top-3 right-3 bg-white/10 backdrop-blur-sm border border-white/20 cursor-pointer transition-all duration-300 w-10 h-10 rounded-lg hover:bg-white/20 hover:backdrop-blur-md hover:border-white/40 hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:scale-105 active:scale-95 z-10"
+          className="fixed top-3 right-3 bg-white/10 backdrop-blur-sm border border-white/20 cursor-pointer transition-all duration-300 w-10 h-10 rounded-lg hover:bg-white/20 hover:backdrop-blur-md hover:border-white/40 hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] hover:scale-105 active:scale-95 z-30"
           aria-label="Close popup"
         >
           {/* Cross text */}
@@ -122,42 +119,55 @@ function EventDetailsPopup({
         {/* Title */}
 
         {/* Main content container */}
-        <div className='flex flex-col md:flex-row gap-4 md:gap-6 w-full '>
+        <div className='flex flex-col md:flex-row gap-1 md:gap-6 w-full md:h-full md:max-h-[calc(85vh-6rem)]'>
           {/* Left side - Image */}
-          <div className='flex-shrink-0 md:w-1/2'>
-            <img className='rounded-lg w-full h-[200px] md:h-[430px] object-contain bg-gray-900' src={poster} alt={name || "Event poster"} />
+          <div className='flex-shrink-0 w-full md:w-2/5 lg:w-1/2 flex items-center justify-center relative pt-12 md:pt-0 md:self-start md:sticky md:top-0'>
+            <Image 
+              className='rounded-lg w-full md:w-auto md:h-[500px] lg:h-[550px] object-cover aspect-[3/4] max-w-[320px] md:max-w-none mx-auto' 
+              src={poster} 
+              alt={name || "Event poster"}
+              width={320}
+              height={427}
+              style={{ objectFit: 'cover' }}
+              priority
+            />
           </div>
 
           {/* Right side - Details */}
-          <div className='flex flex-col justify-center gap-2 '>
-            <h1 className=' font-semibold font-pirata tracking-wider mt-2 text-center text-[#36B9C5] text-[70px]'>{name}</h1>
+          <div className='flex flex-col justify-start my-auto gap-1 md:gap-2 flex-1 md:overflow-y-auto md:max-h-full md:pr-2 md:[&::-webkit-scrollbar]:hidden'
+               style={{
+                 scrollbarWidth: 'none',
+                 msOverflowStyle: 'none',
+               }}
+          >
+            <h1 className=' font-semibold font-pirata tracking-wider mt-1 text-center text-[#36B9C5] text-[45px] md:text-[70px]'>{name}</h1>
 
             {/* Date */}
-            <div className='flex items-center gap-3 md:gap-4 text-white'>
-              <img src="/Calender.svg" alt="" className='w-[67px] h-[67px]' />
+            <div className='flex items-center gap-4 text-white'>
+              <Image src="/Calender.svg" alt="" className='w-[67px] h-[67px]' width={67} height={67} />
               <div>
 
-                <div className='text-lg md:text-xl font-semibold'>{date}</div>
+                <div className='text-xl font-semibold'>{date}</div>
               </div>
             </div>
 
             {/* Venue */}
-            <div className='flex items-center gap-3 md:gap-4 text-white'>
+            <div className='flex items-center gap-4 text-white'>
 
-              <img src="/Location.svg" alt="" className='w-[67px] h-[67px]' />
+              <Image src="/Location.svg" alt="" className='w-[67px] h-[67px]' width={67} height={67} />
 
               <div className='flex-1'>
-                <div className='text-lg md:text-xl font-semibold'>{venue}</div>
+                <div className='text-xl font-semibold'>{venue}</div>
               </div>
             </div>
 
             {/* Description */}
-            <div className='flex items-center  gap-3 md:gap-4 text-white'>
+            <div className='flex items-start  gap-4 text-white'>
 
-              <img src="/Description.svg" alt="" className='w-[67px] h-[67px]' />
+              <Image src="/Description.svg" alt="" className='w-[67px] h-[67px]' width={67} height={67} />
 
               <div className='flex-1'>
-                <div className='text-base md:text-lg leading-relaxed text-gray-200 font-bold'>{description}</div>
+                <div className='text-lg leading-relaxed text-gray-200 font-bold'>{description}</div>
               </div>
             </div>
 
@@ -165,23 +175,24 @@ function EventDetailsPopup({
             <div className=' flex justify-center mt-6'>
               <Link
                 href={RegistrationLink}
+                target='_blank'
               >
                 <button
-                  className='relative bg-cyan-500 border-none p-0 cursor-pointer transition-all duration-300 w-[140px] md:w-[200px] h-[36px] md:h-[48px] overflow-hidden shadow-[0_0_15px_rgba(0,191,255,0.4)] hover:scale-105 hover:shadow-[0_0_25px_rgba(0,191,255,0.8)] active:scale-95'
+                  className='relative bg-cyan-500 border-none p-0 cursor-pointer transition-all duration-300 w-[200px] h-[48px] overflow-hidden shadow-[0_0_15px_rgba(0,191,255,0.4)] hover:scale-105 hover:shadow-[0_0_25px_rgba(0,191,255,0.8)] active:scale-95'
                   style={{
                     clipPath: 'polygon(12px 0%, calc(100% - 12px) 0%, 100% 50%, calc(100% - 12px) 100%, 12px 100%, 0% 50%)'
                   }}
                 >
                   {/* Inner black background */}
                   <div
-                    className='absolute top-[2px] md:top-[3px] left-[6px] md:left-[9px] right-[6px] md:right-[9px] bottom-[2px] md:bottom-[3px] bg-black z-10'
+                    className='absolute top-[3px] left-[9px] right-[9px] bottom-[3px] bg-black z-10'
                     style={{
                       clipPath: 'polygon(8px 0%, calc(100% - 8px) 0%, 100% 50%, calc(100% - 8px) 100%, 8px 100%, 0% 50%)'
                     }}
                   ></div>
 
                   {/* Button text */}
-                  <span className='relative z-20 text-white text-[12px] md:text-[15px] font-semibold uppercase tracking-wider flex items-center justify-center h-full font-sans shadow-[0_0_8px_rgba(0,191,255,0.6)]'>
+                  <span className='relative z-20 text-white text-[15px] font-semibold uppercase tracking-wider flex items-center justify-center h-full font-sans shadow-[0_0_8px_rgba(0,191,255,0.6)]'>
                     Register Now
                   </span>
                 </button>
