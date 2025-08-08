@@ -33,7 +33,7 @@ const JoinCommunity = () => {
               <span className="text-[#5CE4FF]">
                 latest announcements, event highlights,
               </span>{" "}
-              and exclusive insights from Oblivion—the flagship tech event of
+              and exclusive insights from Oblivion—the flagship tech summit of
               D&#39;Code NSUT! Set sail into Silicon Sea of uncharted tech
               territories. Dare to drift into the abyss.
             </p>
