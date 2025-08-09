@@ -23,17 +23,30 @@ function EventCard({
     const viewDetails = () => setshowPopup(true)
     const closePopup = () => setshowPopup(false)
 
+    // Debug logging
+    console.log('EventCard:', name, 'backgroundImage:', eventDetail.backgroundImage)
+    console.log('Full background style:', eventDetail.backgroundImage 
+        ? `url(${eventDetail.backgroundImage}) center/cover no-repeat` 
+        : 'white')
+
     return (
         <>
 
             <div
                 onMouseEnter={() => setisCardHovered(true)}
                 onMouseLeave={() => setisCardHovered(false)}
-                className='card bg-white flex flex-col items-center justify-center gap-1 w-[180px] md:w-[250px] h-[280px] md:h-[400px] relative hover:shadow-[0_0_40px_rgba(0,191,255,0.9),0_0_80px_rgba(0,191,255,0.4)] hover:scale-105 transition-all duration-300 cursor-pointer overflow-hidden flex-shrink-0 rounded-lg '>
-                <h1 className={`${styles.baskervville} text-black text-[28px] md:text-[40px]`}>{name}</h1>
+                className={`card flex flex-col items-center justify-center gap-1 w-[180px] md:w-[250px] h-[280px] md:h-[400px] relative hover:shadow-[0_0_40px_rgba(0,191,255,0.9),0_0_80px_rgba(0,191,255,0.4)] hover:scale-105 transition-all duration-300 cursor-pointer overflow-hidden flex-shrink-0 rounded-lg ${!eventDetail.backgroundImage ? 'bg-white' : ''}`}
+                style={{
+                    background: eventDetail.backgroundImage 
+                        ? `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(${eventDetail.backgroundImage}) center/contain no-repeat` 
+                        : 'white',
+                    minHeight: '280px'
+                }}
+            >
+                <h1 className={`${styles.baskervville} ${eventDetail.backgroundImage ? 'text-white' : 'text-black'} text-[28px] md:text-[40px] relative z-10`}>{name}</h1>
 
                 {/* Custom hexagonal View Details button with Tailwind */}
-                <div className={`${isCardHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"} transition-all duration-500 ease-out absolute bottom-3 md:bottom-5 left-1/2 transform -translate-x-1/2`}>
+                <div className={`${isCardHovered ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"} transition-all duration-500 ease-out absolute bottom-3 md:bottom-5 left-1/2 transform -translate-x-1/2 z-20`}>
                     <button
                         onClick={viewDetails}
                         className='relative bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-400 border-none p-0 cursor-pointer transition-all duration-300 w-[140px] md:w-[200px] h-[36px] md:h-[48px] overflow-hidden shadow-[0_0_15px_rgba(0,191,255,0.4)] hover:scale-105 hover:shadow-[0_0_25px_rgba(0,191,255,0.8)] active:scale-95'
