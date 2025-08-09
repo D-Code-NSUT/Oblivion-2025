@@ -70,23 +70,25 @@ function EventCard({
                 </div>
             </div>
 
-            {showPopup && (
-                eventDetail.state ? (
+            {/* Always render popup for preloading - control visibility internally */}
+            {eventDetail.state ? (
+                showPopup && (
                     <ComingSoonPopUp 
                         name={eventDetail.name}
                         closePopUpFunction={closePopup}
                     />
-                ) : (
-                    <EventDetailsPopup
-                        name={eventDetail.name}
-                        date={eventDetail.date}
-                        description={eventDetail.description}
-                        venue={eventDetail.venue}
-                        RegistrationLink={eventDetail.RegistrationLink}
-                        poster={eventDetail.poster}
-                        closePopUpFunction={closePopup}
-                    />
                 )
+            ) : (
+                <EventDetailsPopup
+                    name={eventDetail.name}
+                    date={eventDetail.date}
+                    description={eventDetail.description}
+                    venue={eventDetail.venue}
+                    RegistrationLink={eventDetail.RegistrationLink}
+                    poster={eventDetail.poster}
+                    closePopUpFunction={closePopup}
+                    isVisible={showPopup}
+                />
             )}
         </>
     )

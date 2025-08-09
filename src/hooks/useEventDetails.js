@@ -2,7 +2,7 @@ function useEventDetails() {
     const eventDetails = [
         {
             name: "Thinker's Quest",
-            poster: "/EventPosters/Thinker's Quest.png",
+            poster: "/EventPosters/ThinkersQuest.png",
             backgroundImage: "/EventPosters/ThinkersQuest.png",
             date: "31 Aug 25, 10:00 AM",
             description: "Thinker's Quest is a no-code, creativity-first competition where participants identify a real-world problem and pitch an innovative solution using logic, storytelling, and presentation skills.",
@@ -56,6 +56,20 @@ function useEventDetails() {
             RegistrationLink : "https://unstop.com/hackathons/wreckathon-oblivion25-dcode-nsut-1533528"
         }
     ]
+
+    // Preload poster images for faster loading
+    if (typeof window !== 'undefined') {
+        eventDetails.forEach(event => {
+            if (event.poster) {
+                const img = new Image()
+                img.src = event.poster
+            }
+            if (event.backgroundImage) {
+                const bgImg = new Image()
+                bgImg.src = event.backgroundImage
+            }
+        })
+    }
 
     return eventDetails
 }

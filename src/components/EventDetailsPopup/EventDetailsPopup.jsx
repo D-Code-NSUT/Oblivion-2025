@@ -10,29 +10,39 @@ function EventDetailsPopup({
   venue,
   RegistrationLink,
   poster,
-  closePopUpFunction
+  closePopUpFunction,
+  isVisible: externalIsVisible = false
 }) {
   const popupOverlayRef = useRef(null)
   const popupRef = useRef(null)
   const [isVisible, setIsVisible] = useState(false)
+  const [isOpen, setIsOpen] = useState(true) // Always render, control visibility differently
 
   const closePopUp = useCallback(() => {
     setIsVisible(false)
     setTimeout(() => {
+      setIsOpen(false)
       if (closePopUpFunction) {
         closePopUpFunction()
       }
     }, 200)
   }, [closePopUpFunction])
 
-  // Animation trigger
+  // Handle external visibility changes
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 10)
-    return () => clearTimeout(timer)
-  }, [])
+    if (externalIsVisible) {
+      setIsOpen(true)
+      const timer = setTimeout(() => setIsVisible(true), 10)
+      return () => clearTimeout(timer)
+    } else {
+      setIsVisible(false)
+    }
+  }, [externalIsVisible])
 
-  // Handle body scroll lock and cleanup
+  // Handle body scroll lock and cleanup - only when visible
   useEffect(() => {
+    if (!isVisible) return
+
     const originalBodyOverflow = document.body.style.overflow
     const originalHtmlOverflow = document.documentElement.style.overflow
 
@@ -80,7 +90,7 @@ function EventDetailsPopup({
         element.style.zIndex = originalZindex[index] || ''
       })
     }
-  }, [closePopUp])
+  }, [closePopUp, isVisible])
 
 
 
@@ -89,7 +99,7 @@ function EventDetailsPopup({
       ref={popupOverlayRef}
       onClick={closePopUp}
       className={`fixed inset-0 flex justify-center items-center backdrop-blur-lg bg-black/35 transition-opacity duration-200 ease-out z-[99999] ${
-        isVisible ? 'opacity-100' : 'opacity-0'
+        isVisible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
       }`}
     >
       <div
@@ -130,7 +140,11 @@ function EventDetailsPopup({
                 alt={name || "Event poster"} 
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                priority
+                priority={true}
+                loading="eager"
+                quality={85}
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R6/i"
               />
             </div>
           </div>
@@ -225,8 +239,8 @@ function EventDetailsPopup({
     </div>
   )
 
-  // Portal rendering with SSR safety
-  return typeof document !== 'undefined' ? createPortal(popupContent, document.body) : null
+  // Portal rendering with SSR safety - Always render but control visibility
+  return typeof document !== 'undefined' && isOpen ? createPortal(popupContent, document.body) : null
 }
 
 export default EventDetailsPopup
