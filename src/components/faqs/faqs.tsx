@@ -9,28 +9,37 @@ import React from "react";
 const items = [
   {
     id: "item-1",
-    header: "What is Lorem Ipsum?",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing...",
+    header: "Can I participate if I don’t have prior coding or tech experience?",
+    content: "Yes! This is more about creativity and comedy than hardcore coding skills. You can use AI tools, no problem.",
   },
   {
     id: "item-2",
-    header: "Where does it come from?",
-    content: "Quisque eget luctus mi, vehicula mollis lorem...",
+    header: "Can I work on a project with friends from different locations?",
+    content: "Yes, for the online round you can collaborate remotely using GitHub or other tools. For the offline round (if shortlisted), all team members must be physically present at the venue.",
   },
   {
     id: "item-3",
-    header: "Why do we use it?",
-    content: "Suspendisse massa risus, pretium id interdum in...",
+    header: "What are the benefits of participating?",
+    content: `•	Showcase your creativity in front of judges and peers.
+            \n•	Have fun while experimenting with tech.
+            \n•	Network with like-minded creators at Oblivion’25.
+            \n•	Possible prizes and bragging rights for having the most ridiculous yet brilliant idea.
+            `,
   },
   {
     id: "item-4",
-    header: "Where does it come from?",
-    content: "Quisque eget luctus mi, vehicula mollis lorem...",
+    header: "What are the eligibility criteria?",
+    content: "There are no strict eligibility criteria other than being a student and following the event’s rules (no plagiarism, no past project resubmissions, and no disruptive conduct).",
   },
   {
     id: "item-5",
-    header: "Why do we use it?",
-    content: "Suspendisse massa risus, pretium id interdum in...",
+    header: "What happens if my team misses the submission deadline?",
+    content: "Late submissions will not be considered — manage your time well.",
+  },
+  {
+    id: "item-6",
+    header: "How do we register?",
+    content: "All teams must register on Unstop before Round 1 starts.",
   },
 ];
 
@@ -54,7 +63,7 @@ const FAQs = () => {
               <AccordionTrigger className="text-xl">
                 {item.header}
               </AccordionTrigger>
-              <AccordionContent className="flex flex-col gap-4 text-start px-5 text-lg text-balance">
+              <AccordionContent className="flex flex-col gap-4 text-start px-5 text-lg text-balance whitespace-pre-line">
                 {item.content}
               </AccordionContent>
             </AccordionItem>
