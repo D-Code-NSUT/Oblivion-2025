@@ -39,7 +39,7 @@ const JoinCommunity = () => {
             </p>
 
             <Link
-              href="https://wa.me/your-whatsapp-number"
+              href="https://www.instagram.com/oblivion_nsut/"
               target="_blank"
               rel="noopener noreferrer"
             >
