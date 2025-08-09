@@ -181,7 +181,7 @@ function Events() {
   }
 
   return (
-    <div ref={eventsContainerRef} className='min-h-screen flex flex-col justify-center items-center relative pb-8'>
+    <div ref={eventsContainerRef} className='md:min-h-screen flex flex-col justify-center items-center relative py-8'>
       <div className='w-full flex flex-col items-center relative z-10 px-4'>
         <h1 
           className={`text-[60px] md:text-[120px] text-[#36B9C5] mb-2 md:mb-4 text-center ${isMounted ? styles['pirata-one-regular'] : ''}`}
