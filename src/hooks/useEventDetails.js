@@ -27,7 +27,7 @@ function useEventDetails() {
         },
         {
             name: "Code Raid",
-            poster: "/EventPosters/CodeRaid[1].png",
+            poster: "/EventPosters/CodeRaid.png",
             date: "30 Aug 25, 11:00 AM",
             description: "CodeRaid is the ultimate battleground for coding enthusiasts at Oblivion, organized by D’Code : The Competitive Programming Society of NSUT.",
             venue: "Mini Audi 1, NSUT",
