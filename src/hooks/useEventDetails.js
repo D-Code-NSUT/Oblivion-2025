@@ -2,7 +2,7 @@ function useEventDetails() {
     const eventDetails = [
         {
             name: "Thinker's Quest",
-            poster: "/EventPosters/CodeRaid[1].png",
+            poster: "/EventPosters/Thinker's Quest.png",
             date: "31 Aug 25, 10:00 AM",
             description: "Thinker's Quest is a no-code, creativity-first competition where participants identify a real-world problem and pitch an innovative solution using logic, storytelling, and presentation skills.",
             venue: "Block-8, NSUT",
@@ -18,7 +18,7 @@ function useEventDetails() {
         },
         {
             name: "Hackathon",
-            poster: "/EventPosters/CodeRaid[1].png",
+            poster: "/EventPosters/Hack-a-Pirate.png",
             state: "Coming Soon",
             date: "29th August 2025,10 A.M.",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in justo ligula.",
@@ -27,7 +27,7 @@ function useEventDetails() {
         },
         {
             name: "Code Raid",
-            poster: "/EventPosters/CodeRaid[1].png",
+            poster: "/EventPosters/CodeRaid.png",
             date: "30 Aug 25, 11:00 AM",
             description: "CodeRaid is the ultimate battleground for coding enthusiasts at Oblivion, organized by D’Code : The Competitive Programming Society of NSUT.",
             venue: "Mini Audi 1, NSUT",
@@ -43,7 +43,7 @@ function useEventDetails() {
         },
         {
             name: "Wreckathon",
-            poster: "/EventPosters/CodeRaid[1].png",
+            poster: "/EventPosters/Wreckathon.png",
             date: "31 Aug 25, 10:00 AM",
             description: "The goal is to make the most impractical, financially inviable software that doesn’t lie about its uselessness. Points are awarded for creativity, originality, and comedy.",
             venue: "Smart Block, NSUT",

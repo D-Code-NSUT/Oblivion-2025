@@ -54,30 +54,30 @@ function WhyToStep() {
                         <div className=' w-[90%] sm:w-[90%] mx-auto lg:w-full flex-wrap lg:flex-nowrap flex  gap-5 border-l-2 lg:border-l-0 py-2 lg:py-0 border-l-[#5CE4FF] shadow-[-10px_0_10px_-3px_#36B9C5] lg:shadow-none '>
 
                             <div className='flex flex-col relative items-start px-8 lg:px-0 lg:items-center text-center gap-2 before:content-[""] before:bg-black before:p-[15px] lg:before:p-[30px] before:border-[6px] before:border-[#5CE4FF] before:rounded-full before:absolute lg:before:top-[-94px] lg:before:left-[40%] before:top-0 before:left-[-22px] '>
-                                <h1 className='text-[#FFA02B] text-[20px] lg:text-[30px] font-bold font-source  text-left lg:text-center'>Access Powerful Mentorship & Hands-On Learning
+                                <h1 className='text-[#FFA02B] text-[20px] lg:text-[30px] font-bold font-source  text-left lg:text-center'>Build Your Tribe
                                 </h1>
-                                <div className='text-[15px] lg:text-[23px] font-bold font-source text-left lg:text-center'>Join exciting offline workshops, challenges, and activities while getting one-on-one guidance from industry pros. Sharpen your skills, refine your ideas, and learn by doing.
+                                <div className='text-[15px] lg:text-[23px] font-bold font-source text-left lg:text-center'>Expand your network. Connect with fellow innovators and creators.
                                 </div>
                             </div>
 
                             <div className='flex flex-col relative items-start px-8 lg:px-0 lg:items-center text-center gap-2 before:content-[""] before:bg-black before:p-[15px] lg:before:p-[30px] before:border-[6px] before:border-[#5CE4FF] before:rounded-full before:absolute lg:before:top-[-94px] lg:before:left-[40%] before:top-0 before:left-[-22px] '>
-                                <h1 className='text-[#FFA02B] text-[20px] lg:text-[30px] font-bold font-source text-left lg:text-center'>Build Your Tribe
+                                <h1 className='text-[#FFA02B] text-[20px] lg:text-[30px] font-bold font-source text-left lg:text-center'>Hands-On Learning
                                 </h1>
-                                <div className='text-[15px] lg:text-[23px] font-bold font-source text-left lg:text-center'>Connect with fellow innovators, creators, and tech geeks. Expand your network and grow with a vibrant community.
+                                <div className='text-[15px] lg:text-[23px] font-bold font-source text-left lg:text-center'>Get one-on-one guidance from the industry pros. Sharpen your skills, Learn by doing.
                                 </div>
                             </div>
 
                             <div className='flex flex-col relative items-start px-8 lg:px-0 lg:items-center text-center gap-2 before:content-[""] before:bg-black before:p-[15px] lg:before:p-[30px] before:border-[6px] before:border-[#5CE4FF] before:rounded-full before:absolute lg:before:top-[-94px] lg:before:left-[40%] before:top-0 before:left-[-22px] '>
-                                <h1 className='text-[#FFA02B] text-[20px] lg:text-[30px] font-bold font-source text-left lg:text-center'>Win Big – ₹1,50,000 Prize Pool
+                                <h1 className='text-[#FFA02B] text-[20px] lg:text-[30px] font-bold font-source text-left lg:text-center'>Win Big
                                 </h1>
-                                <div className='text-[15px] lg:text-[23px] font-bold font-source text-left lg:text-center'>Show off your creativity and compete for a prize pool worth ₹1.5 Lakhs. Hustle hard, win big
+                                <div className='text-[15px] lg:text-[23px] font-bold font-source text-left lg:text-center'>Compete for Prize Pool worth Rs 1.5 Lakhs. Show off your creativity.
                                 </div>
                             </div>
 
                             <div className='flex flex-col relative items-start px-8 lg:px-0 lg:items-center text-center gap-2 before:content-[""] before:bg-black before:p-[15px] lg:before:p-[30px] before:border-[6px] before:border-[#5CE4FF] before:rounded-full before:absolute lg:before:top-[-94px] lg:before:left-[40%] before:top-0 before:left-[-22px] '>
-                                <h1 className='text-[#FFA02B] text-[20px] lg:text-[30px] font-bold font-source text-left lg:text-center'>Bring Your Ideas to Life
+                                <h1 className='text-[#FFA02B] text-[20px] lg:text-[30px] font-bold font-source text-left lg:text-center'>Ideas to Reality
                                 </h1>
-                                <div className='text-[15px] lg:text-[23px] font-bold font-source text-left lg:text-center'>Got a brilliant idea? Pitch it to us and get real support from the college to turn it into reality.This is your opportunity to solve real world problems and convert it into a startup</div>
+                                <div className='text-[15px] lg:text-[23px] font-bold font-source text-left lg:text-center'>Got a Brilliant Idea? Pitch to us and get real support from the college to turn it into a startup.</div>
                             </div>
 
                         </div>
