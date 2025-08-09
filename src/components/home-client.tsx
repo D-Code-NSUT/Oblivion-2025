@@ -183,11 +183,11 @@ export default function HomeClient() {
           <WhyToStep />
         </div>
       </section>
-      <section id="sponsors" className={`${styles.section} relative z-10`}>
+      {/* <section id="sponsors" className={`${styles.section} relative z-10`}>
         <div>
           <SponsorSection />
         </div>
-      </section>
+      </section> */}
 
       <section
         id="join-community"
