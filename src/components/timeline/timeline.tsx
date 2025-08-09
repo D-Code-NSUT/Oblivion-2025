@@ -1,12 +1,14 @@
 import Image from "next/image";
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import TimelinePath from "./timeline-path";
 import { motion } from "motion/react";
 
 const TimeLine = () => {
   return (
-    <div className="timeline-wrapper">
-      <div className="relative w-full bg-black xs:h-[980px] h-[800px]">
+    <div className="mt-5">
+      <div className="relative w-full bg-black xs:h-[980px] h-[800px]" style={{
+        background: "linear-gradient(90deg,rgba(0, 65, 71, 0.80) 0%, rgba(1, 1, 1, 1) 50%)"
+      }}>
         <Image
           src="/pirate-image-timeline.webp"
           alt="Timeline Pirate"
@@ -27,7 +29,7 @@ const TimeLine = () => {
             }}
             transition={{ duration: 2 }}
             viewport={{ once: true }}
-            className="uppercase font-pirata lg:text-[120px] xs:text-[100px] text-[60px] text-[#36B9C5] text-center mt-20"
+            className="uppercase font-pirata lg:text-[120px] xs:text-[100px] text-[60px] text-[#36B9C5] text-center mt-15"
           >
             TIMELINE
           </motion.div>
