@@ -37,7 +37,7 @@ function WhyToStep() {
 
             <div id='WhyToStep' 
                 style={{ 
-                    backgroundImage: `url("/why_to_step_into_oblivion-ship-bg.png")`,
+                    backgroundImage: `url("/why_to_step_into_oblivion-ship-bg.webp")`,
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
                     backgroundPosition: 'center',
