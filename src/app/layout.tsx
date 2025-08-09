@@ -35,8 +35,31 @@ const sourceSans = Source_Sans_3({
 
 
 export const metadata: Metadata = {
-  title: "Oblivion",
-  description: "Dcode Flagship event",
+  title: "Oblivion 2025 - D'Code NSUT",
+  description: "Dive into the depths of innovation at Oblivion 2025, D'Code NSUT's flagship technical extravaganza.",
+  openGraph: {
+    title: "Oblivion 2025 - D'Code NSUT",
+    description:
+      "Dive into the depths of innovation at Oblivion 2025, D'Code NSUT's flagship technical extravaganza. Experience cutting-edge competitions, workshops, and events that push the boundaries of technology and creativity.",
+    type: "website",
+    url: "https://oblivionnsut.com/",
+    siteName: "D'Code NSUT",
+    images: [
+      {
+        url: "https://oblivionnsut.com/og-main.png",
+        width: 1200,
+        height: 630,
+        alt: "D'Code NSUT",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Oblivion 2025 - D'Code NSUT",
+    description:
+      "Dive into the depths of innovation at Oblivion 2025, D'Code NSUT's flagship technical extravaganza. Experience cutting-edge competitions, workshops, and events that push the boundaries of technology and creativity.",
+    images: ["https://oblivionnsut.com/og-main.png"],
+  },
 };
 
 export default function RootLayout({
