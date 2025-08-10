@@ -330,7 +330,7 @@ export default function Nav() {
               </motion.div>
               <motion.div variants={mobileNavLinkVariants}>
                 <div onClick={() => setMenuOpen(false)}>
-                  <NavLink href="/#timeline" isActive={isNavLinkActive('/#timeline')}>timeline</NavLink>
+                  <NavLink href="/#timeline" isActive={isNavLinkActive('/#timeline')}>Timeline</NavLink>
                 </div>
               </motion.div>
               <motion.div variants={mobileNavLinkVariants}>
