@@ -185,7 +185,7 @@ export default function Nav() {
         <div className={styles.navLinks}>
           <NavLink href="/" isActive={isNavLinkActive('/')}>Home</NavLink>
           <NavLink href="/#about" isActive={isNavLinkActive('/#about')}>About</NavLink>
-          <NavLink href="/#timeline" isActive={isNavLinkActive('/#timeline')}>timeline</NavLink>
+          <NavLink href="/#timeline" isActive={isNavLinkActive('/#timeline')}>Timeline</NavLink>
           <NavLink href="/#events" isActive={isNavLinkActive('/#events')}>Events</NavLink>
           <NavLink href="/#contact-us" isActive={isNavLinkActive('/#contact-us')}>Contact Us</NavLink>
         </div>
