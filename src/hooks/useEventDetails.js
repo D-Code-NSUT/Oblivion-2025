@@ -4,7 +4,6 @@ function useEventDetails() {
       name: "Hackathon",
       poster: "/EventPosters/Hack-a-Pirate.png",
       backgroundImage: "/EventPosters/Hack-a-Pirate.png",
-      state: "Coming Soon",
       date: "29th August 2025,10 A.M.",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in justo ligula.",
       venue: "Smart Block, NSUT",

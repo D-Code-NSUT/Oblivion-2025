@@ -124,7 +124,7 @@ export default function Nav() {
   const pathname = usePathname();
 
   // Define the sections to spy on - try both hero section IDs
-  const sectionIds = ['hero-section', 'hero', 'features', 'about', 'events', 'sponsors', 'contact-us'];
+  const sectionIds = ['hero-section', 'hero', 'features', 'about', 'events', 'timeline', 'contact-us'];
   const activeSection = useScrollSpy(sectionIds);
 
   // Helper function to determine if a nav link should be active
@@ -141,9 +141,9 @@ export default function Nav() {
       // Events link is active when events section is active
       return pathname === '/' && activeSection === 'events';
     }
-    if (href === '/#sponsors') {
-      // Sponsors link is active when sponsors section is active
-      return pathname === '/' && activeSection === 'sponsors';
+    if (href === '/#timeline') {
+      // timeline link is active when timeline section is active
+      return pathname === '/' && activeSection === 'timeline';
     }
     if (href === '/#contact-us') {
       // Contact Us link is active when contact us section is active
@@ -185,8 +185,8 @@ export default function Nav() {
         <div className={styles.navLinks}>
           <NavLink href="/" isActive={isNavLinkActive('/')}>Home</NavLink>
           <NavLink href="/#about" isActive={isNavLinkActive('/#about')}>About</NavLink>
+          <NavLink href="/#timeline" isActive={isNavLinkActive('/#timeline')}>timeline</NavLink>
           <NavLink href="/#events" isActive={isNavLinkActive('/#events')}>Events</NavLink>
-          <NavLink href="/#sponsors" isActive={isNavLinkActive('/#sponsors')}>Sponsors</NavLink>
           <NavLink href="/#contact-us" isActive={isNavLinkActive('/#contact-us')}>Contact Us</NavLink>
         </div>
         <div className={styles.cta}>
@@ -330,12 +330,12 @@ export default function Nav() {
               </motion.div>
               <motion.div variants={mobileNavLinkVariants}>
                 <div onClick={() => setMenuOpen(false)}>
-                  <NavLink href="/#events" isActive={isNavLinkActive('/#events')}>Events</NavLink>
+                  <NavLink href="/#timeline" isActive={isNavLinkActive('/#timeline')}>timeline</NavLink>
                 </div>
               </motion.div>
               <motion.div variants={mobileNavLinkVariants}>
                 <div onClick={() => setMenuOpen(false)}>
-                  <NavLink href="/#sponsors" isActive={isNavLinkActive('/#sponsors')}>Sponsors</NavLink>
+                  <NavLink href="/#events" isActive={isNavLinkActive('/#events')}>Events</NavLink>
                 </div>
               </motion.div>
               <motion.div variants={mobileNavLinkVariants}>

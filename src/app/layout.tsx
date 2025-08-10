@@ -69,6 +69,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <script
+          async
+          src="https://us.umami.is/script.js"
+          data-website-id="c42ec8bf-dba5-4dd9-ba08-161c9285525f"
+        ></script>
+      </head>
       <body className={`${pirata.variable} ${robotoMono.variable} ${bebasNeue.variable} ${sourceSans.variable}`}>
         {/* <Nav /> */}
         <LenisProvider>
