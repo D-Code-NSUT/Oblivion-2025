@@ -5,9 +5,9 @@ function useEventDetails() {
       poster: "/EventPosters/Hack-a-Pirate.png",
       backgroundImage: "/EventPosters/Hack-a-Pirate.png",
       date: "29th August 2025,10 A.M.",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in justo ligula.",
+      description: "A 24-hour innovation challenge where students collaborate to transform ideas into working prototypes. Teams will be guided by expert mentors through brainstorming, design, and development, emphasizing technical innovation and teamwork.",
       venue: "Smart Block, NSUT",
-      RegistrationLink: ""
+      RegistrationLink: "https://unstop.com/hackathons/hack-a-pirate-oblivion25-netaji-subhas-university-of-technology-nsut-delhi-1533535"
     },
     {
       name: "UX Voyage",
