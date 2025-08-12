@@ -15,19 +15,19 @@ function sponorCard(sponsorData:SponsorData,index:number,priority:number){
             priority==2?'w-[23vw] md:w-[20vw] lg:w-[20vw]':
             priority==3?'min-w-[15vw] md:min-w-[15vw] max-w-[85%] lg:min-w-[15vw]  pb-3 pt-5':'min-w-[80%] max-w-[85%] md:px-2 lg:px-3 pb-3 pt-5'} overflow-hidden  mx-auto rounded-3xl border-cyan-700 border-3 items-center`}>    
             
-            <Image
+            {/* <Image
                 src="/sponsiBcg.webp"
                 alt="Decorative background"
                 fill
                 className="opacity-50 object-contain"
                 quality={75}
-            />
+            /> */}
             
             { priority<3 && <div className={`text-sm ${styles['pirata-one-regular']}
               drop-shadow-[0_0_12px_rgba(34,211,238,0.3)] whitespace-normal  tracking-wide font-light md:text-2xl lg:text-2xl 
               z-10 w-full lg:w-fit text-center mb-3 px-1 md:px-4 lg:px-4 py-1 border-b-3 border-cyan-700
                md:border-3 md:border-t-0 lg:border-3 lg:border-t-0 bg-[rgba(23,75,90,0.7)] ${'md:rounded-b-xl'} lg:rounded-b-xl`}>{sponsorData.title||"Title Sponsor"}</div>}
-            <Image  className='sponser z-10 w-full mx-auto  md:w-[70%] h-auto lg:w-[50%] drop-shadow-[0_0_10px_rgba(0,0,0,0.8)]' src={sponsorData.image} alt={sponsorData.name||""} quality={100} width={800} height={800}/>
+            <Image  className='sponser z-10 w-[90%] mx-auto  md:w-[70%] h-auto lg:w-[50%] drop-shadow-[0_0_10px_rgba(0,0,0,0.8)]' src={sponsorData.image} alt={sponsorData.name||""} quality={100} width={800} height={800}/>
             {/*<div className='w-[90%] my-1 text-center name px-1 z-10 '>{sponsorData.name}</div>*/}
         </div>
     </div>)
