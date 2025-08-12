@@ -124,7 +124,7 @@ export default function Nav() {
   const pathname = usePathname();
 
   // Define the sections to spy on - try both hero section IDs
-  const sectionIds = ['hero-section', 'hero', 'features', 'about', 'events', 'timeline', 'contact-us'];
+  const sectionIds = ['hero-section', 'hero','sponsors', 'features', 'about', 'events', 'timeline', 'contact-us'];
   const activeSection = useScrollSpy(sectionIds);
 
   // Helper function to determine if a nav link should be active
@@ -144,6 +144,10 @@ export default function Nav() {
     if (href === '/#timeline') {
       // timeline link is active when timeline section is active
       return pathname === '/' && activeSection === 'timeline';
+    }
+    if (href === '/#sponsors') {
+      // timeline link is active when timeline section is active
+      return pathname === '/' && activeSection === 'sponsors';
     }
     if (href === '/#contact-us') {
       // Contact Us link is active when contact us section is active
@@ -187,6 +191,7 @@ export default function Nav() {
           <NavLink href="/#about" isActive={isNavLinkActive('/#about')}>About</NavLink>
           <NavLink href="/#timeline" isActive={isNavLinkActive('/#timeline')}>Timeline</NavLink>
           <NavLink href="/#events" isActive={isNavLinkActive('/#events')}>Events</NavLink>
+          <NavLink href="/#sponsors" isActive={isNavLinkActive('/#sponsors')}>Sponsors</NavLink>
           <NavLink href="/#contact-us" isActive={isNavLinkActive('/#contact-us')}>Contact Us</NavLink>
         </div>
         <div className={styles.cta}>
@@ -336,6 +341,11 @@ export default function Nav() {
               <motion.div variants={mobileNavLinkVariants}>
                 <div onClick={() => setMenuOpen(false)}>
                   <NavLink href="/#events" isActive={isNavLinkActive('/#events')}>Events</NavLink>
+                </div>
+              </motion.div>
+              <motion.div variants={mobileNavLinkVariants}>
+                <div onClick={() => setMenuOpen(false)}>
+                  <NavLink href="/#sponsors" isActive={isNavLinkActive('/#sponsors')}>Sponsors</NavLink>
                 </div>
               </motion.div>
               <motion.div variants={mobileNavLinkVariants}>

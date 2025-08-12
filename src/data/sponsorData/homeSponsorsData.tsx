@@ -14,43 +14,43 @@ export interface SponsorData {
 export const sponsorsData = {
   top: [
     {
-      title: "Platinum Sponsor",
-      name: "OpenAI",
-      image: "/oblivion.webp",
+      title: "Title Sponser Of Hackathon",
+      name: "Yosemite Crew",
+      image: "/sponserPhoto/yosemite.svg",
       link: "https://openai.com",
       custom: "",
     },
-    {
-      title: "Main Event Partner",
-      name: "Microsoft Research",
-      image: "/oblivion.webp",
-      link: "https://microsoft.com",
-      custom: "",
-    },
+    // {
+    //   title: "Main Event Partner",
+    //   name: "Microsoft Research",
+    //   image: "/oblivion.webp",
+    //   link: "https://microsoft.com",
+    //   custom: "",
+    // },
   ],
 
   second: [
-    {
-      title: "Gold Sponsor",
-      name: "Vercel",
-      image: "/oblivion.webp",
-      link: "https://vercel.com",
-      custom: "",
-    },
-    {
-      title: "Silver Partner",
-      name: "Supabase",
-      image: "/oblivion.webp",
-      link: "https://supabase.com",
-      custom: "",
-    },
-    {
-      title: "Tech Partner",
-      name: "Notion Labs",
-      image: "/oblivion.webp",
-      link: "https://notion.so",
-      custom: "",
-    },
+    // {
+    //   title: "Gold Sponsor",
+    //   name: "Vercel",
+    //   image: "/oblivion.webp",
+    //   link: "https://vercel.com",
+    //   custom: "",
+    // },
+    // {
+    //   title: "Silver Partner",
+    //   name: "Supabase",
+    //   image: "/oblivion.webp",
+    //   link: "https://supabase.com",
+    //   custom: "",
+    // },
+    // {
+    //   title: "Tech Partner",
+    //   name: "Notion Labs",
+    //   image: "/oblivion.webp",
+    //   link: "https://notion.so",
+    //   custom: "",
+    // },
     
   ],
 
