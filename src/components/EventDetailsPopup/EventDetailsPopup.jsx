@@ -130,10 +130,10 @@ function EventDetailsPopup({
         {/* Title */}
 
         {/* Main content container */}
-        <div className='flex flex-col lg:flex-row gap-4 lg:gap-6 w-full h-full'>
+        <div className='flex flex-col lg:flex-row gap-4 lg:gap-6 w-full lg:h-full lg:max-h-[calc(85vh-8rem)]'>
           {/* Left side - Image */}
-          <div className='flex-shrink-0 lg:w-1/2'>
-            <div className="relative w-full aspect-[4/3] lg:aspect-[3/4] rounded-lg overflow-hidden">
+          <div className='flex-shrink-0 lg:w-1/2 lg:sticky lg:top-0'>
+            <div className="relative w-full h-[250px] md:h-[350px] lg:h-[450px] rounded-lg overflow-hidden">
               <Image 
                 className='object-contain w-full h-full' 
                 src={poster} 
