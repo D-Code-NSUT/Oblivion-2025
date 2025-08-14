@@ -15,6 +15,7 @@ import SponsorSection from "./sponsorSection/sponsorSection";
 import { motion } from "motion/react";
 import ContactUs from "./contact-us/contact-us";
 import FAQs from "./faqs/faqs";
+import Speaker from "./speaker/speaker";
 
 // you need to wrap the component with section tags
 
@@ -183,9 +184,14 @@ export default function HomeClient() {
           <WhyToStep />
         </div>
       </section>
-      <section id="sponsors" className={`${styles.section} relative z-10`}>
-        <div>
+      <section id="sponsors" className={`${styles.section} bg-[linear-gradient(to_top,_black_0%,_rgba(0,0,0,0)_20%,_rgba(0,0,0,0)_100%)] relative z-10`}>
+        
           <SponsorSection />
+        
+      </section>
+      <section id="speakers" className={`${styles.section} relative z-10`}>
+        <div>
+          <Speaker />
         </div>
       </section>
 

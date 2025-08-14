@@ -10,7 +10,7 @@ function sponorCard(sponsorData:SponsorData,index:number,priority:number){
         priority==2? 'my-4 w-[26vw]':
         priority==3? 'my-3 w-[20vw]':'my-3 w-[15vw]'
     }`} key={index}>
-        <div className={`bg-cyan-900/30 pb-2 transiton drop-shadow-[0_0_15px_rgba(34,211,238,0.5)] hover:drop-shadow-[0_0_15px_rgba(34,211,238,1)] duration-300 flex flex-col h-full relative justify-between ${
+        <div className={`bg-cyan-900/30 pb-2 transiton drop-shadow-[0_0_15px_rgba(34,211,238,0.5)] hover:drop-shadow-[0_0_15px_rgba(34,211,238,0.75)] duration-400 flex flex-col h-full relative justify-between ${
             priority==1?'w-[30vw] md:w-[25vw] lg:w-[25vw] ':
             priority==2?'w-[23vw] md:w-[20vw] lg:w-[20vw]':
             priority==3?'min-w-[15vw] md:min-w-[15vw] max-w-[85%] lg:min-w-[15vw]  pb-3 pt-5':'min-w-[80%] max-w-[85%] md:px-2 lg:px-3 pb-3 pt-5'} overflow-hidden  mx-auto rounded-3xl border-cyan-700 border-3 items-center`}>    
@@ -36,7 +36,8 @@ function sponorCard(sponsorData:SponsorData,index:number,priority:number){
 function SponsorSection() {
   
     return (
-        <div className={`h-full w-full pt-5 bg-repeat-y lg:bg-[length:100%_auto]`}>
+        <div className={`h-full w-full pt-5  bg-[linear-gradient(to_top,_black_0%,_rgba(0,0,0,0)_20%,_rgba(0,0,0,0)_100%)] lg:pb-40 pb-20 lg:bg-[length:100%_auto]`}>
+            
             <Image 
                 src="/homeSponsiBcg.webp"
                 alt="Hero Background"
@@ -57,7 +58,7 @@ function SponsorSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 2 }}
             viewport={{ once: true }}>
-             <div className={` text-[60px] md:text-[120px] transiton duration-300 hover:drop-shadow-[0_0_20px_rgba(34,211,238,0.5)] text-[#36B9C5] mb-2 md:mb-4 text-center ${styles['pirata-one-regular']}`}>
+             <div className={` text-[60px] md:text-[120px] transiton duration-400 hover:drop-shadow-[0_0_20px_rgba(34,211,238,0.4)] text-[#36B9C5] mb-2 md:mb-4 text-center ${styles['pirata-one-regular']}`}>
                 OBLIVION&#39;25 SPONSORS
             </div>
             </motion.div>
