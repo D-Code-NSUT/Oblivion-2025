@@ -8,7 +8,7 @@ export interface speakerData {
     designation: string,
     intro: string,
 }
-export const speakersData:Array<speakerData> = [
+// Sample data for speakers
     // {
     //     name: "bhhbbhh bhbh bhbhbh",
     //     image: "/speakerPhoto/john_doe.jpg",
@@ -24,4 +24,6 @@ export const speakersData:Array<speakerData> = [
     //     designation: "Software Engineer at XYZ",
     //     intro: "John Doe is a software engineer with over 10 years of experience in web development. He specializes in React and Node.js, and has a passion for building scalable applications."
     // },
+export const speakersData:Array<speakerData> = [
+    
 ]

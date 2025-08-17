@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import styles from '@/components/speaker/speaker.module.css';
 import {Linkedin, Instagram} from 'lucide-react';
@@ -7,12 +9,12 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 const speakerCard = (speakerData:speakerData, index:number) => (
 <motion.div 
-    initial={index/2==0?{ x: -300, opacity: 0 }:{x:300, opacity: 0}}
-    animate={{ x: 0, opacity: 1 }}
-    viewport={{ once: true, amount: 0.5 }}
-    transition={{ duration: 1, ease: 'easeOut' }}
+    initial={index%2==0?{ x: -300, opacity: 0 }:{x:300, opacity: 0}}
+    whileInView={{ x: 0, opacity: 1 }}
+    viewport={{ once: true, amount: 0.4 }}
+    transition={{ duration: 1, ease: [0,0,0,1] }}
     key={index}
-    className="bg-[rgba(0,0,0,0.1)] mx-auto flex flex-col items-center  duration-300 transition-shadow justify-start w-[80%] mb-10 p-2 lg:p-4 border-2 rounded-3xl  lg:hover:shadow-[0_0_5px_cyan,0_0_40px_cyan] border-cyan-500 shadow-[0_0_5px_cyan,0_0_15px_cyan] lg:shadow-[0_0_5px_cyan,0_0_30px_cyan]">
+    className="bg-[rgba(0,0,0,0.1)] mx-auto flex flex-col items-center  duration-400 transition-shadow justify-start w-[80%] mb-10 p-2 lg:p-4 border-2 rounded-3xl  lg:hover:shadow-[0_0_5px_cyan,0_0_40px_cyan] border-cyan-500 shadow-[0_0_5px_cyan,0_0_15px_cyan] lg:shadow-[0_0_5px_cyan,0_0_30px_cyan]">
 <Image
     src={speakerData.image}
     alt='no image'
@@ -45,7 +47,7 @@ const Speaker = () => (speakersData[0] &&
           backgroundPosition: "center",
         }}>
  <div
-className='bg-[linear-gradient(to_top,_black_0%,_rgba(0,0,0,0)_20%,rgba(0,0,0,0)_85%,_rgba(0,0,0,1)_100%)] py-15 lg:py-30 '>           
+className='overflow-hidden bg-[linear-gradient(to_top,_black_0%,_rgba(0,0,0,0)_20%,rgba(0,0,0,0)_85%,_rgba(0,0,0,1)_100%)] py-15 lg:py-30 '>           
   <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
