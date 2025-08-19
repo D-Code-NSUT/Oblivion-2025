@@ -16,7 +16,8 @@ const TimeLine = () => {
           height={500}
           className="absolute top-0 sm:right-0 object-cover  sm:w-max  w-[110vw] h-full  z-0"
         />
-
+<div className="absolute z-5 -top-10 inset-0 bg-[linear-gradient(to_bottom,_black_0%,_rgba(0,0,0,0)_20%,_rgba(0,0,0,0)_100%)]" />
+      
         <div className="relative z-20 h-full overflow-hidden">
           <motion.div
             initial={{

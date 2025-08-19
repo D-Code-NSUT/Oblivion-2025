@@ -17,9 +17,9 @@ function About() {
     fearless pursuit. */}
     </>;
   return (
-    <div className={`pt-35 w-full mt-80 flex flex-col items-center overflow-hidden justify-center relative ${styles.aboutSection}`}>
+    <div className={`pt-50 w-full mt-80 flex flex-col items-center overflow-hidden justify-center relative pb-20 lg:pb-40 ${styles.aboutSection}`}>
         <Image
-        className= {`absolute top-10 -left-40 opacity`}
+        className= {`absolute top-30 -left-40 opacity`}
             src="/abg.webp"
             alt="pspss"
             width={700}
@@ -27,7 +27,7 @@ function About() {
             priority
         />
         <Image
-        className= {`absolute top-2 lg:-top-40 left-10vw ${styles.smoothFade} ${hovered?styles.flickerFreq:styles.flicker} opacity-70`}
+        className= {`absolute top-10 lg:top-0 left-10vw ${styles.smoothFade} ${hovered?styles.flickerFreq:styles.flicker} `}
             src="/lightning.webp"
             alt="pspss"
             width={1500}
@@ -35,7 +35,7 @@ function About() {
             priority
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/100 via-black/40 to-black/100" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0),rgba(0,0,0,0),#000,#000)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0),rgba(0,0,0,0.3),#000,#000)]" />
         <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}

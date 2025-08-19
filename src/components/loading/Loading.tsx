@@ -50,7 +50,7 @@ export default function Loading({ onComplete }: LoadingProps) {
         quality={100}
         priority
       />
-      <div className="absolute z-5 inset-0 bg-[linear-gradient(to_bottom,_black_0%,_rgba(0,0,0,0.1)_30%,_rgba(0,0,0,0)_100%)]" />
+      <div className="absolute z-5 inset-0 bg-[linear-gradient(to_bottom,_black_0%,_rgba(0,0,0,0)_40%,_rgba(0,0,0,0)_100%)]" />
       <Image
         className= {`absolute top-0 lg:-top-40   ${styles.smoothFade} ${styles.flickerFreq} opacity-10`}
             src="/lightning.webp"
