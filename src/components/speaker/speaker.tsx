@@ -21,7 +21,7 @@ const speakerCard = ({ speakerData, index, photoSide = 'left' }: SpeakerCardProp
         <motion.div
             initial={side === 'left' ? { x: -300, opacity: 0 } : { x: 300, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            viewport={{ once: true, amount: 0.4 }}
+            viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 1, ease: [0, 0, 0, 1] }}
             key={index}
             className="relative mx-auto w-full max-w-2xl aspect-[16/9] rounded-3xl border-2 border-cyan-500 
@@ -75,7 +75,7 @@ const Speaker = () => (
                 backgroundPosition: "center center",
             }}
         >
-            <div className="overflow-hidden bg-[linear-gradient(to_top,_black_0%,_rgba(0,0,0,0)_20%,rgba(0,0,0,0)_85%,_rgba(0,0,0,1)_100%)] py-16 lg:py-32">
+            <div className="overflow-visible bg-[linear-gradient(to_top,_black_0%,_rgba(0,0,0,0)_20%,rgba(0,0,0,0)_85%,_rgba(0,0,0,1)_100%)] py-16 lg:py-32">
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
