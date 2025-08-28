@@ -4,7 +4,7 @@ import Image from 'next/image';
 import styles from '@/components/sponsorSection/sponsorSection.module.css';
 import { motion } from 'motion/react';
 
-function SponsorCard(sponsorData: SponsorData, index: number, priority: number) {
+function SponsorCard(sponsorData: SponsorData, index: number) {
     return (
         <div className="m-2" key={index}>
             <div className="bg-cyan-900/30 pb-2 transition drop-shadow-[0_0_15px_rgba(34,211,238,0.5)] hover:drop-shadow-[0_0_15px_rgba(34,211,238,0.75)] duration-400 flex flex-col relative justify-between items-center overflow-hidden w-[60vw] md:w-[25vw] lg:w-[22vw] h-[260px] lg:h-[260px] mx-auto rounded-3xl border-cyan-700 border-3">
@@ -51,7 +51,7 @@ function SponsorSection() {
                 viewport={{ once: true }}
             >
                 <div className={`text-[60px] md:text-[120px] transition duration-400 hover:drop-shadow-[0_0_20px_rgba(34,211,238,0.4)] text-[#36B9C5] mb-2 md:mb-4 text-center ${styles['pirata-one-regular']}`}>
-                    OBLIVION'25 SPONSORS
+                    OBLIVION&#39;25 SPONSORS
                 </div>
             </motion.div>
             <motion.div
@@ -62,7 +62,7 @@ function SponsorSection() {
             >
                 {sponsorsData.top[0] && (
                     <div className="flex sm:py-2 lg:py-5 flex-wrap px-5 items-stretch justify-center content-around">
-                        {sponsorsData.top.map((sponsorData, index) => SponsorCard(sponsorData, index, 1))}
+                        {sponsorsData.top.map((sponsorData, index) => SponsorCard(sponsorData, index))}
                     </div>
                 )}
             </motion.div>
@@ -74,7 +74,7 @@ function SponsorSection() {
             >
                 {sponsorsData.second[0] && (
                     <div className="flex sm:py-2 lg:py-5 flex-wrap px-7 items-stretch justify-center content-around">
-                        {sponsorsData.second.map((sponsorData, index) => SponsorCard(sponsorData, index, 2))}
+                        {sponsorsData.second.map((sponsorData, index) => SponsorCard(sponsorData, index))}
                     </div>
                 )}
             </motion.div>
@@ -86,7 +86,7 @@ function SponsorSection() {
             >
                 {sponsorsData.third[0] && (
                     <div className="flex sm:py-2 lg:py-5 px-1 flex-wrap lg:gap-5 items-stretch justify-center content-around">
-                        {sponsorsData.third.map((sponsorData, index) => SponsorCard(sponsorData, index, 3))}
+                        {sponsorsData.third.map((sponsorData, index) => SponsorCard(sponsorData, index))}
                     </div>
                 )}
             </motion.div>
@@ -98,7 +98,7 @@ function SponsorSection() {
             >
                 {sponsorsData.last[0] && (
                     <div className="flex sm:py-2 lg:py-5 items-stretch flex-wrap lg:gap-5 justify-center content-around">
-                        {sponsorsData.last.map((sponsorData, index) => SponsorCard(sponsorData, index, 4))}
+                        {sponsorsData.last.map((sponsorData, index) => SponsorCard(sponsorData, index))}
                     </div>
                 )}
             </motion.div>
