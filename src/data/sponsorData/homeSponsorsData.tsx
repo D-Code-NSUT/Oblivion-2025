@@ -20,9 +20,6 @@ export const sponsorsData = {
       link: "https://redbull.com/in-en",
       custom: "",
     },
-  ],
-  
-  second: [
     {
       title: "Co–Title Sponsor",
       name: "Yosemite Crew",
@@ -30,16 +27,9 @@ export const sponsorsData = {
       link: "https://openai.com",
       custom: "",
     },
-    {
-      title: "Gold Sponsor",
-      name: "AccioJob",
-      image: "https://res.cloudinary.com/dqvwf3z2c/image/upload/v1756399551/acciojob_logo_s9wpmm.jpg",
-      link: "https://openai.com",
-      custom: "",
-    },
   ],
   
-  third: [
+  second: [
     {
       title: "Associate Sponsor",
       name: "CampusX",
@@ -51,6 +41,16 @@ export const sponsorsData = {
       title: "Associate Sponsor",
       name: "Geek Room",
       image: "https://res.cloudinary.com/dqvwf3z2c/image/upload/v1756401930/ed736366-39c2-42d2-8a5e-b055578f1a4c.png",
+      link: "https://openai.com",
+      custom: "",
+    },
+  ],
+  
+  third: [
+    {
+      title: "Gold Sponsor",
+      name: "AccioJob",
+      image: "https://res.cloudinary.com/dqvwf3z2c/image/upload/v1756399551/acciojob_logo_s9wpmm.jpg",
       link: "https://openai.com",
       custom: "",
     },
