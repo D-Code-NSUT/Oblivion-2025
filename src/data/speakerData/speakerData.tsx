@@ -51,7 +51,7 @@ export const speakersData:Array<speakerData> = [
         linkedin: "#",
         instagram: "#",
         designation: "Software Engineer 2 at Amazon",
-        intro: "He’s a former instructor with strong skills and brand value; we can finalize him, but the college must avoid online marketing due to Amazon’s policies.",
+        intro: "Ali Nawaz Haider Rizvi is a skilled instructor with strong teaching abilities and solid software development experience.",
     },
     
 ]
